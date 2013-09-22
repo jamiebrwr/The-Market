@@ -35,7 +35,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		    <header style="text-align:center;margin-bottom:3em;">
 			<h1>Get Started Today</h1>
 			<p>Trade what you don't want for something you do want.</p>
-			<a class="button large" style="padding: 1em 5.2em;" href="/The-Market/post-new-item/">Post Now</a>
+			<?php $register_link = wp_register( '', '', false);
+			echo '<a class="button large" style="padding: 1em 5.2em;"'.$register_link.'</a>';
+			?>
 		</header>
 		<?php }
 		?>
