@@ -1,0 +1,89 @@
+*** Hustle Changelog ***
+
+2013.08.30 - version 1.1.14
+* /includes/theme-woocommerce.css - Make WooCommerce style disabling 2.1 compatible
+
+2013.07.30 - version 1.1.13
+* /includes/theme-actions.php - Remove '!important' from link color declaration.
+* /includes/theme-options.php - Added option for global Full Width Layout.
+* /includes/theme-functions.php - Fixed 'disable mousescroll' option for Contact page template.
+
+2013.07.12 - version 1.1.12
+* includes/intro-message.php - Data sanitization. 
+
+2013.06.27 - version 1.1.11
+* css/woocommerce.css - Fixed iPad add to cart button / price positioning.
+* css/style.css - Fixed issues with WooSlider playing in reverse.
+
+2013.05.09 - version 1.1.10
+ * css/layout.css - Fixed testimonials styling issues.
+ * css/woocommerce.css - Fixed review stars not showing up when using Lightbox for the reviews form.
+
+2013.04.30 - version 1.1.9
+ * style.css - Fixed slider content not showing up if 'Slide' option is enabled and 'Slider Background' option is used.
+
+2013.04.05 - version 1.1.8
+ * /styles/boxed.css - Fixed background color overriding the custom theme options.
+
+2013.03.27 - version 1.1.7
+ * /css/woocommerce.css - Fixed cart table styling bug for mobile resolutions.
+
+2013.03.18 - version 1.1.6
+ * /css/woocommerce.css - Fixed max-width for cart images
+
+2013.03.05 - version 1.1.5
+ * woocommerce/content-product.php - ensured compatibility with WooCommerce 1.6.6 & 2.0.
+ * includes/theme-woocommerce.php - Fixed pagination styling bug. Fixed upsells / related products display.
+ * css/woocommerce.css - Styled WooCommerce 2.0 classes & features. Styled demo store notice.
+
+2013.02.13 - version 1.1.4
+ * /includes/theme-woocommerce.php - Added add_theme_support( 'woocommerce' );
+
+2013.02.04 - version 1.1.3
+ * style.css - Changed #intro-message background-size property to cover, so that BG images fills space across all resolutions.
+ 			 - Center align featured slider on homepage when not using component widget.
+ * /css/woocommerce.css - Prevent product button color from being overwritten by custom link color options.
+ 						- Adjusted styling for Products shortcode output.
+ 						- Adjusted product hovers styling for iPad
+ * /includes/theme-actions.php - Changed Custom Typography to load after alt style, so they don't get overwritten by alt styles.
+
+2013.01.17 - version 1.1.2
+ * /css/woocommerce.less,
+   /css/woocommerce.css - Adds support for WooCommerce 2.0 CSS classes.
+ * style.less,
+   style.css - Adds support for WooCommerce 2.0 CSS classes.
+
+2013.01.14 - version 1.1.1
+ * style.css - Fixed CSS selector conflict between site headers and post headers.
+
+2012.12.20 - version 1.1.0
+ * /includes/blog-posts.php - Make sure not to execute $the_query->the_post() before the loop begins.
+ * /includes/theme-actions.php - Replace "get_bloginfo()" call with get_stylesheet_directory_uri(). Add logic for the custom "button alt colour" theme option.
+ * /includes/theme-options.php - Add theme option to customise the colour of the alternate (secondary) button style.
+ * /includes/theme-functions.php - Add missing textdomain to text in labels in the comment form arguments filter.
+ * index.php - Set the default values for the "features" and "testimonials" titles to be empty, to allow for empty values if the them options are left empty.
+ * template-contact.php - Convert translation string with variables to use sprintf() instead.
+ * content.php - Add "Off" localised string to the comment count, for when both trackbacks and comments are disabled for an entry.
+ * style.less,
+   style.css,
+   blue.less,
+   blue.css,
+   boxed.less,
+   boxed.css,
+   cream.less,
+   cream.css,
+   dark.less,
+   dark.css,
+   grey.less,
+   grey.css - Add styling for the "Comments Off" state of the comments bubble, where both comments and trackbacks are disabled for an entry.
+
+2012.12.18 - version 1.0.1
+ * /includes/featured-products.php - WooCommerce 2.0 compatibility - Use get_product instead of WC_Product
+ * /includes/featured-slider.php - set media width for videos
+ * /css/layout.css - fixed 3rd level dropdowns
+ * style.css - added 'height:auto' to slide-content images
+ * /css/layout.css,
+   style.css - adjusted promo banner spacing for mobile devices
+
+2012.12.13 - version 1.0.0
+ * First release!
