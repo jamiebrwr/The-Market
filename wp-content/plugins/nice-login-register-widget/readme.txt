@@ -3,7 +3,7 @@ Contributors: sgPlanwize
 Donate link: 
 Tags: nice, widget, login, register, password, log-in, logout, log-out, user, ajax, authentication
 Requires at least: 3.0.0
-Tested up to: 3.5.1
+Tested up to: 3.6.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,10 @@ An elegant login and register widget that can be placed in any widget area on yo
 = Translation =
 
 * France (fr_FR) - [GabLeRoux](http://wordpress.org/support/profile/gableroux).
+* Lithuania (lt_LT) - Justas Malinauskas
+* Arab (ar_AR) - Mehdi Bounya
+* Spanish (en_EN) - Pedro Bibiloni
+* German (de_DE) - bobo2222
 
 
 If you have created your own language translation, or have an update of an existing one, you can send [gettext PO and MO](http://codex.wordpress.org/Translating_WordPress) files to `info@superplug.in` so I can bundle it into next versions.
@@ -63,7 +67,7 @@ Yes, you can change the border's color or get rid of it entirely in the backend 
 
 In order to enable the shortcode, you will have to go to the Widget menu under Appearances, then drag and drop the nice login widget into the custom widget area entitled Nice Login Widget Shortcode. Once in this is completed, you will be able to insert this widget area by using the [sp_login_shortcode] shortcode.
 
-= Why can't I see the "don’t have an account?" link? =
+= Why can't I see the "donï¿½t have an account?" link? =
 In order to see this link you have to enable the "Anyone can register" option. This option is  found in Settings under the General section. 
 
 = Will this work with my other plugins, such as "Limit Login Attempts" =
@@ -80,15 +84,10 @@ Our widget should be compatible with most other plugins associated with logging 
 7. Get the whole errors and messages in one place.
 
 == Changelog ==
+= 1.3.1 =
+* Title field was added to the widget option. Now you can add any title you want for your login widget.
+* Bug fixed.
 
-= 1.1.1 =
-* First version released.
-
-= 1.2 =
-* Fixed multisite bug issues.
-* Fixed lost password bug issue.
-* jQuery Feature has been added to the administrator widget control.
-* Fixed bug when your blog is on "Anyone can register" unchecked and the "Don't have an account" link shows up. Now this link shows up properly. 
 
 = 1.3 =
 * JQuery capabilities performance improved.
@@ -97,6 +96,16 @@ Our widget should be compatible with most other plugins associated with logging 
 * Added the option to turn the Widget Border on or off, or to change its color.
 * Added shortcode capability, allowing the widget to placed within any page or post content.
 * Enabled SSL communication to improve security.
+
+= 1.2 =
+* Fixed multisite bug issues.
+* Fixed lost password bug issue.
+* jQuery Feature has been added to the administrator widget control.
+* Fixed bug when your blog is on "Anyone can register" unchecked and the "Don't have an account" link shows up. Now this link shows up properly. 
+
+
+= 1.1.1 =
+* First version released.
 
 == Upgrade Notice ==
 
@@ -115,4 +124,6 @@ Control the logged-in message with merge tags through widget options.
 Ajax support added, allowing all actions to take place on the widget without moving to the WordPress login page.
 Many bugs fixed and general capabilities was added.
 
+= 1.3.1 =
 
+Now you can add title for every login widget

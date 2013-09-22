@@ -69,61 +69,96 @@ class WPUF_Payment {
             $type = ( $_REQUEST['type'] == 'post' ) ? 'post' : 'pack';
             $post_id = isset( $_REQUEST['post_id'] ) ? intval( $_REQUEST['post_id'] ) : 0;
             $pack_id = isset( $_REQUEST['pack_id'] ) ? intval( $_REQUEST['pack_id'] ) : 0;
+            $is_free = false;
+            
+            if ( $pack_id ) {
+                $pack_detail = WPUF_Subscription::get_subscription( $pack_id );
+                
+                if ( $pack_detail->cost == '0') {
+                    $is_free = true;
+                }
+            }
 
             $gateways = $this->get_active_gateways();
+            
+            if ( isset( $_REQUEST['wpuf_payment_submit'] ) ) {
+                $selected_gateway = $_REQUEST['wpuf_payment_method'];
+            } else {
+                $selected_gateway = 'paypal';
+            }
 
             ob_start();
-            ?>
-            <?php if ( count( $gateways ) ) { ?>
-                <form id="wpuf-payment-gateway" action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="POST">
-                    <?php wp_nonce_field( 'wpuf_payment_gateway' ) ?>
-                    <?php do_action( 'wpuf_before_payment_gateway' ); ?>
-                    <p>
-                        <label for="wpuf-payment-method"><?php _e( 'Choose Your Payment Method', 'wpuf' ); ?></label><br />
+            
+            if ( $pack_id && $is_free ) {
+                $current_user = wp_get_current_user();
+                
+                $wpuf_subscription = WPUF_Subscription::init();
+                
+                if( ! WPUF_Subscription::has_used_free_pack( $current_user->ID, $pack_id) ) {
+                    $wpuf_subscription->new_subscription( $current_user->ID, $pack_id );
+                    WPUF_Subscription::add_used_free_pack( $current_user->ID, $pack_id );
+                    
+                    $message = apply_filters( 'wpuf_fp_activated_msg', __( 'Your free package has been activated. Enjoy!' ), 'wpuf' );
+                } else {
+                    $message = apply_filters( 'wpuf_fp_activated_error', __( 'You already have activated a free package previously.' ), 'wpuf' );
+                }
+                ?>
+                    <div class="wpuf-info"><?php echo $message; ?></div>
+                <?php
+            } else {
+                ?>
+                <?php if ( count( $gateways ) ) { ?>
+                    <form id="wpuf-payment-gateway" action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="POST">
+                        <?php wp_nonce_field( 'wpuf_payment_gateway' ) ?>
+                        <?php do_action( 'wpuf_before_payment_gateway' ); ?>
+                        <p>
+                            <label for="wpuf-payment-method"><?php _e( 'Choose Your Payment Method', 'wpuf' ); ?></label><br />
 
-                        <ul class="wpuf-payment-gateways">
-                            <?php foreach ($gateways as $gateway_id => $gateway) { ?>
-                                <li class="wpuf-gateway-<?php echo $gateway_id; ?>">
-                                    <label>
-                                        <input name="wpuf_payment_method" type="radio" value="<?php echo esc_attr( $gateway_id ); ?>">
-                                        <?php
-                                        echo $gateway['label'];
+                            <ul class="wpuf-payment-gateways">
+                                <?php foreach ($gateways as $gateway_id => $gateway) { ?>
+                                    <li class="wpuf-gateway-<?php echo $gateway_id; ?>">
+                                        <label>
+                                            <input name="wpuf_payment_method" type="radio" value="<?php echo esc_attr( $gateway_id ); ?>" <?php checked( $selected_gateway, $gateway_id ); ?>>
+                                            <?php
+                                            echo $gateway['label'];
 
-                                        if ( !empty( $gateway['icon'] ) ) {
-                                            printf(' <img src="%s" alt="image">', $gateway['icon'] );
-                                        }
-                                        ?>
-                                    </label>
+                                            if ( !empty( $gateway['icon'] ) ) {
+                                                printf(' <img src="%s" alt="image">', $gateway['icon'] );
+                                            }
+                                            ?>
+                                        </label>
 
-                                    <div class="wpuf-payment-instruction" style="display: none;">
-                                        <?php echo wpuf_get_option( 'gate_instruct_' . $gateway_id, 'wpuf_payment' ); ?>
-                                    </div>
+                                        <div class="wpuf-payment-instruction" style="display: none;">
+                                            <div class="wpuf-instruction"><?php echo wpuf_get_option( 'gate_instruct_' . $gateway_id, 'wpuf_payment' ); ?></div>
 
-                                    <?php do_action( 'wpuf_gateway_form_' . $gateway_id, $type, $post_id, $pack_id ); ?>
-                                </li>
+                                            <?php do_action( 'wpuf_gateway_form_' . $gateway_id, $type, $post_id, $pack_id ); ?>
+                                        </div>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+
+                        </p>
+                        <?php do_action( 'wpuf_after_payment_gateway' ); ?>
+                        <p>
+                            <input type="hidden" name="type" value="<?php echo $type; ?>" />
+                            <input type="hidden" name="action" value="wpuf_pay" />
+                            <?php if ( $post_id ) { ?>
+                                <input type="hidden" name="post_id" value="<?php echo $post_id; ?>" />
                             <?php } ?>
-                        </ul>
 
-                    </p>
-                    <?php do_action( 'wpuf_after_payment_gateway' ); ?>
-                    <p>
-                        <input type="hidden" name="type" value="<?php echo $type; ?>" />
-                        <input type="hidden" name="action" value="wpuf_pay" />
-                        <?php if ( $post_id ) { ?>
-                            <input type="hidden" name="post_id" value="<?php echo $post_id; ?>" />
-                        <?php } ?>
+                            <?php if ( $pack_id ) { ?>
+                                <input type="hidden" name="pack_id" value="<?php echo $pack_id; ?>" />
+                            <?php } ?>
+                            <input type="submit" name="wpuf_payment_submit" value="<?php _e( 'Proceed', 'wpuf' ); ?>"/>
+                        </p>
+                    </form>
+                <?php } else { ?>
+                    <?php _e( 'No Payment gateway found', 'wpuf' ); ?>
+                <?php } ?>
 
-                        <?php if ( $pack_id ) { ?>
-                            <input type="hidden" name="pack_id" value="<?php echo $pack_id; ?>" />
-                        <?php } ?>
-                        <input type="submit" name="wpuf_payment_submit" value="<?php _e( 'Proceed', 'wpuf' ); ?>"/>
-                    </p>
-                </form>
-            <?php } else { ?>
-                <?php _e( 'No Payment gateway found', 'wpuf' ); ?>
-            <?php } ?>
-
-            <?php
+                <?php
+            }
+            
             return ob_get_clean();
         }
 

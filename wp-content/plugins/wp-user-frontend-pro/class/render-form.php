@@ -628,6 +628,7 @@ class WPUF_Render_Form {
     function text( $attr, $post_id, $type = 'post' ) {
         // checking for user profile username
         $username = false;
+        $taxonomy = false;
 
         if ( $post_id ) {
 
@@ -644,6 +645,7 @@ class WPUF_Render_Form {
                     }
 
                     $value = implode( ', ', $tagsarray );
+                    $taxonomy = true;
                 } elseif ( $type == 'post' ) {
                     $value = get_post_field( $attr['name'], $post_id );
                 } elseif ( $type == 'user' ) {
@@ -656,12 +658,24 @@ class WPUF_Render_Form {
             }
         } else {
             $value = $attr['default'];
+            
+            if ( $type == 'post' && $attr['name'] == 'tags' ) {
+                $taxonomy = true;
+            }
         }
         ?>
 
         <div class="wpuf-fields">
             <input class="textfield<?php echo $this->required_class( $attr ); ?>" id="<?php echo $attr['name']; ?>" type="text" data-required="<?php echo $attr['required'] ?>" data-type="text"<?php $this->required_html5( $attr ); ?> name="<?php echo esc_attr( $attr['name'] ); ?>" placeholder="<?php echo esc_attr( $attr['placeholder'] ); ?>" value="<?php echo esc_attr( $value ) ?>" size="<?php echo esc_attr( $attr['size'] ) ?>" <?php echo $username ? 'disabled' : ''; ?> />
             <span class="wpuf-help"><?php echo $attr['help']; ?></span>
+            
+            <?php if ( $taxonomy ) { ?>
+            <script type="text/javascript">
+                jQuery(function($) {
+                    $('li.tags input[name=tags]').suggest( ajaxurl + '?action=ajax-tag-search&tax=post_tag', { delay: 500, minchars: 2, multiple: true, multipleSep: ', ' } );
+                });
+            </script>
+            <?php } ?>
         </div>
 
         <?php
@@ -1224,6 +1238,7 @@ class WPUF_Render_Form {
      * @param int|null $post_id
      */
     function taxonomy( $attr, $post_id ) {
+        $exclude_type = isset( $attr['exclude_type'] ) ? $attr['exclude_type'] : 'exclude';
         $exclude = $attr['exclude'];
         $taxonomy = $attr['name'];
 
@@ -1255,7 +1270,7 @@ class WPUF_Render_Form {
                         'echo' => 0,
                         'title_li' => '',
                         'class' => $taxonomy,
-                        'exclude' => $exclude,
+                        $exclude_type => $exclude,
                         'selected' => $selected,
                     ) );
                     echo str_replace( '<select', '<select ' . $required, $select );
@@ -1278,7 +1293,7 @@ class WPUF_Render_Form {
                         'echo' => 0,
                         'title_li' => '',
                         'class' => $taxonomy . ' multiselect',
-                        'exclude' => $exclude,
+                        $exclude_type => $exclude,
                         'selected' => $selected,
                         'walker' => $walker
                     ) );
@@ -1288,13 +1303,19 @@ class WPUF_Render_Form {
 
                 case 'checkbox':
                     printf( '<span data-required="%s" data-type="tax-checkbox" />', $attr['required'] );
-                    wpuf_category_checklist( $post_id, false, $taxonomy, $exclude, $attr );
+                    wpuf_category_checklist( $post_id, false, $attr );
                     break;
                 
                 case 'text':
                     ?>
             
                     <input class="textfield<?php echo $this->required_class( $attr ); ?>" id="<?php echo $attr['name']; ?>" type="text" data-required="<?php echo $attr['required'] ?>" data-type="text"<?php $this->required_html5( $attr ); ?> name="<?php echo esc_attr( $attr['name'] ); ?>" value="<?php echo esc_attr( implode( ', ', $terms ) ); ?>" size="40" />
+                    
+                    <script type="text/javascript">
+                        jQuery(function($) {
+                            $('#<?php echo $attr['name']; ?>').suggest( ajaxurl + '?action=ajax-tag-search&tax=<?php echo $attr['name']; ?>', { delay: 500, minchars: 2, multiple: true, multipleSep: ', ' } );
+                        });
+                    </script>
                     
                     <?php
                     break;

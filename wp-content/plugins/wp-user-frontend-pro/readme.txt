@@ -8,6 +8,22 @@ http://docs.wedevs.com/wp-user-frontend-pro/
 
 == Changelog ==
 
+= version 2.1.8 =
+
+date: 18 September, 2013
+
+ * [new] associate uploaded images to post area
+ * [new] tags autocomplete 
+ * [new] default post form assignment
+ * [new] taxonomy exclude/include/child_of feature
+ * [new] free subscription option
+ * [new] new edit post status "No Change"
+ * [new] delete transaction option
+ * [new] signup page override redirection
+ * [new] insert photo: image size selection
+ * [new] insert photo: type of image selection
+ * [new] "pending" post edit enable/disable option
+
 = version 2.1.7 =
 
 date: 12 July, 2013

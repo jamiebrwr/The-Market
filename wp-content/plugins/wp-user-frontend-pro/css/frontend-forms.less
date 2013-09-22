@@ -509,9 +509,14 @@ table.wpuf-table {
             margin: 0;
 
             .wpuf-payment-instruction {
-                background: #ebe8eb;
                 padding: 8px 10px;
-                margin: 8px 10px;
+                margin: 0 10px;
+            }
+
+            .wpuf-instruction {
+                padding: 8px 10px;
+                margin-bottom: 10px;
+                background: #ebe8eb;
                 font-size: 13px;
                 .border-radius(2px);
             }
@@ -597,4 +602,30 @@ table.wpuf-table {
             font-weight: bold;
         }
     }
+}
+
+/** jQuery Suggest **/
+
+.ac_results {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+    border: 1px solid #ccc;
+
+    li {
+        padding: 2px 5px;
+        white-space: nowrap;
+        text-align: left;
+    }
+}
+
+.ac_over {
+    cursor: pointer;
+}
+
+.ac_match {
+    text-decoration: underline;
 }

@@ -51,7 +51,8 @@ ul.wpuf_packs .cost{background:red;border-radius:30px 30px 30px 30px;color:#FFFF
 #pass-strength-result.strong{background-color:#c3ff88;border-color:#8dff1c !important;}
 table.wpuf-table{border:1px solid #E7E7E7;margin:0 opx 10px 0;text-align:left;width:100%;}table.wpuf-table thead th,table.wpuf-table th{color:#888888;font-size:12px;font-weight:bold;line-height:18px;padding:9px 24px;}
 table.wpuf-table td{border-top:1px solid #E7E7E7;padding:6px 24px;}
-#wpuf-payment-gateway ul.wpuf-payment-gateways{list-style:none;margin:10px 0;}#wpuf-payment-gateway ul.wpuf-payment-gateways li{margin:0;}#wpuf-payment-gateway ul.wpuf-payment-gateways li .wpuf-payment-instruction{background:#ebe8eb;padding:8px 10px;margin:8px 10px;font-size:13px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+#wpuf-payment-gateway ul.wpuf-payment-gateways{list-style:none;margin:10px 0;}#wpuf-payment-gateway ul.wpuf-payment-gateways li{margin:0;}#wpuf-payment-gateway ul.wpuf-payment-gateways li .wpuf-payment-instruction{padding:8px 10px;margin:0 10px;}
+#wpuf-payment-gateway ul.wpuf-payment-gateways li .wpuf-instruction{padding:8px 10px;margin-bottom:10px;background:#ebe8eb;font-size:13px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
 .wpuf-pagination div.pagination{text-align:center;padding:7px;margin:3px;}
 .wpuf-pagination .page-numbers{padding:2px 8px;margin:2px;border:1px solid #4A5154;text-decoration:none;color:#4A5154;background:#fff;border-radius:5px;-moz-border-radius:5px;}.wpuf-pagination .page-numbers:hover,.wpuf-pagination .page-numbers:active{border:1px solid #4A5154;background-color:#4A5154;color:#fff;border-radius:5px;-moz-border-radius:5px;}
 .wpuf-pagination .page-numbers.current{padding:2px 8px;margin:2px;border:1px solid #4A5154;font-weight:bold;background-color:#4A5154;color:#FFF;border-radius:5px;-moz-border-radius:5px;}
@@ -60,3 +61,6 @@ table.wpuf-table td{border-top:1px solid #E7E7E7;padding:6px 24px;}
 .wpuf-author .wpuf-author-inside p{margin-bottom:10px !important;}
 .wpuf-author .wpuf-author-inside p.wpuf-author-info{padding-top:8px;}
 .wpuf-author .wpuf-author-inside p.wpuf-user-name a{color:#335160;font-size:1.2em;font-weight:bold;}
+.ac_results{padding:0;margin:0;list-style:none;position:absolute;z-index:10000;display:none;border:1px solid #ccc;}.ac_results li{padding:2px 5px;white-space:nowrap;text-align:left;}
+.ac_over{cursor:pointer;}
+.ac_match{text-decoration:underline;}

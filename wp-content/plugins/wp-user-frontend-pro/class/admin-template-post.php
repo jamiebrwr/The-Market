@@ -124,6 +124,7 @@ class WPUF_Admin_Template_Post extends WPUF_Admin_Template {
         $type_name = sprintf( '%s[%d][type]', self::$input_name, $field_id );
         $order_name = sprintf( '%s[%d][order]', self::$input_name, $field_id );
         $orderby_name = sprintf( '%s[%d][orderby]', self::$input_name, $field_id );
+        $exclude_type_name = sprintf( '%s[%d][exclude_type]', self::$input_name, $field_id );
         $exclude_name = sprintf( '%s[%d][exclude]', self::$input_name, $field_id );
         $woo_attr_name = sprintf( '%s[%d][woo_attr]', self::$input_name, $field_id );
         $woo_attr_vis_name = sprintf( '%s[%d][woo_attr_vis]', self::$input_name, $field_id );
@@ -131,6 +132,7 @@ class WPUF_Admin_Template_Post extends WPUF_Admin_Template {
         $type_value = $values ? esc_attr( $values['type'] ) : 'select';
         $order_value = $values ? esc_attr( $values['order'] ) : 'ASC';
         $orderby_value = $values ? esc_attr( $values['orderby'] ) : 'name';
+        $exclude_type_value = $values ? esc_attr( $values['exclude_type'] ) : 'exclude';
         $exclude_value = $values ? esc_attr( $values['exclude'] ) : '';
         $woo_attr_value = $values ? esc_attr( $values['woo_attr'] ) : 'no';
         $woo_attr_vis_value = $values ? esc_attr( $values['woo_attr_vis'] ) : 'no';
@@ -171,10 +173,19 @@ class WPUF_Admin_Template_Post extends WPUF_Admin_Template {
                         <option value="DESC"<?php selected( $order_value, 'DESC' ); ?>><?php _e( 'DESC', 'wpuf' ); ?></option>
                     </select>
                 </div> <!-- .wpuf-form-rows -->
+                
+                <div class="wpuf-form-rows">
+                    <label><?php _e( 'Selection Type', 'wpuf' ); ?></label>
+                    <select name="<?php echo $exclude_type_name ?>">
+                        <option value="exclude"<?php selected( $exclude_type_value, 'exclude' ); ?>><?php _e( 'Exclude', 'wpuf' ); ?></option>
+                        <option value="include"<?php selected( $exclude_type_value, 'include' ); ?>><?php _e( 'Include', 'wpuf' ); ?></option>
+                        <option value="child_of"<?php selected( $exclude_type_value, 'child_of' ); ?>><?php _e( 'Child of', 'wpuf' ); ?></option>
+                    </select>
+                </div> <!-- .wpuf-form-rows -->
 
                 <div class="wpuf-form-rows">
-                    <label><?php _e( 'Exclude terms', 'wpuf' ); ?></label>
-                    <input type="text" class="smallipopInput" name="<?php echo $exclude_name; ?>" title="<?php _e( 'Enter the term IDs as comma separated (without space) to exclude in the form.', 'wpuf' ); ?>" value="<?php echo $exclude_value; ?>" />
+                    <label><?php _e( 'Selection terms', 'wpuf' ); ?></label>
+                    <input type="text" class="smallipopInput" name="<?php echo $exclude_name; ?>" title="<?php _e( 'Enter the term IDs as comma separated (without space) to exclude/include in the form.', 'wpuf' ); ?>" value="<?php echo $exclude_value; ?>" />
                 </div> <!-- .wpuf-form-rows -->
                 
                 <div class="wpuf-form-rows">

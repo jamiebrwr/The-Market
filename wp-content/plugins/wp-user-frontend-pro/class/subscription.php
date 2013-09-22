@@ -8,6 +8,8 @@
  * @package WP User Frontend
  */
 class WPUF_Subscription {
+    
+    private static $_instance;
 
     function __construct() {
         add_filter( 'wpuf_add_post_args', array($this, 'set_pending'), 10, 1 );
@@ -29,6 +31,14 @@ class WPUF_Subscription {
 
         add_shortcode( 'wpuf_sub_info', array($this, 'subscription_info') );
         add_shortcode( 'wpuf_sub_pack', array($this, 'subscription_packs') );
+    }
+    
+    public static function init() {
+        if ( !self::$_instance ) {
+            self::$_instance = new self;
+        }
+
+        return self::$_instance;
     }
 
     /**
@@ -324,13 +334,19 @@ class WPUF_Subscription {
             foreach ($packs as $pack) {
                 $duration = ( $pack->duration == 0 ) ? 'unlimited' : $pack->duration;
                 $count = ( $pack->count == 0 ) ? 'unlimited' : $pack->count;
+                $is_free = $pack->cost == '0' ? true : false;
+                $price = $is_free ? __('Free', 'wpuf') : wpuf_get_option( 'currency_symbol', 'wpuf_payment' ) . $pack->cost;
+                $onclick = $is_free ? 'return confirm("' . __( 'You can only buy the free pack once. Proceed?', 'wpuf' ) . '");' : '';
+                $payment_page = get_permalink( wpuf_get_option( 'payment_page', 'wpuf_payment' ) );
                 ?>
                 <li>
                     <h3><?php echo $pack->name; ?> - <?php echo $pack->description; ?></h3>
                     <p><?php echo $count; ?> posts for <?php echo $duration; ?> days.
-                        <span class="cost"><?php echo wpuf_get_option( 'currency_symbol', 'wpuf_payment' ) . $pack->cost; ?></span>
+                        <span class="cost"><?php echo $price; ?></span>
                     </p>
-                    <p><a href="<?php echo get_permalink( wpuf_get_option( 'payment_page', 'wpuf_payment' ) ); ?>?action=wpuf_pay&type=pack&pack_id=<?php echo $pack->id; ?>"><?php _e( 'Buy Now', 'wpuf' ); ?></a></p>
+                    <p>
+                        <a href="<?php echo add_query_arg( array('action' => 'wpuf_pay', 'type' => 'pack', 'pack_id' => $pack->id ), $payment_page ); ?>" onclick="<?php echo esc_attr( $onclick ); ?>"><?php _e( 'Buy Now', 'wpuf' ); ?></a>
+                    </p>
                 </li>
                 <?php
             }
@@ -435,6 +451,45 @@ class WPUF_Subscription {
                 update_user_meta( $user_id, 'wpuf_sub_pcount', $_POST['wpuf_sub_pcount'] );
             }
         }
+    }
+    
+    /**
+     * Determine if the user has used a free pack before
+     * 
+     * @since 2.1.8
+     * 
+     * @param int $user_id
+     * @param int $pack_id
+     * @return boolean
+     */
+    public static function has_used_free_pack( $user_id, $pack_id ) {
+        $has_used = get_user_meta( $user_id, 'wpuf_fp_used', true );
+
+        if ( $has_used == '' ) {
+            return false;
+        }
+
+        if ( is_array( $has_used ) && isset( $has_used[$pack_id] ) ) {
+            return true;
+        }
+
+        return false;
+    }
+    
+    /**
+     * Add a free used pack to the user account
+     * 
+     * @since 2.1.8
+     * 
+     * @param int $user_id
+     * @param int $pack_id
+     */
+    public static function add_used_free_pack( $user_id, $pack_id ) {
+        $has_used = get_user_meta( $user_id, 'wpuf_fp_used', true );
+        $has_used = is_array( $has_used ) ? $has_used : array();
+
+        $has_used[$pack_id] = $pack_id;
+        update_user_meta( $user_id, 'wpuf_fp_used', $has_used );
     }
 
 }

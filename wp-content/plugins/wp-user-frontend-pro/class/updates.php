@@ -121,7 +121,7 @@ class WPUF_Updates {
 
         $base_url = add_query_arg( 'wc-api', 'software-api', self::base_url );
         $target_url = $base_url . '&' . http_build_query( $args );
-        $response = wp_remote_get( $target_url );
+        $response = wp_remote_get( $target_url, array( 'timeout' => 15 ) );
         $update = wp_remote_retrieve_body( $response );
 
         if ( is_wp_error( $response ) || $response['response']['code'] != 200 ) {

@@ -3,7 +3,7 @@
 Plugin Name: Nice Login Widget
 Plugin URI: http://www.superplug.in
 Description: Add, build and manage login-register widget
-Version: 1.3
+Version: 1.3.1
 Author: SuperPlugin Team
 Author URI: http://superplug.in/team/
 */
@@ -28,7 +28,7 @@ class SP_Nice_Login_Widget
 		$args = array(
 				'name'          => 'Nice Login Widget Shortcode',
 				'id'            => 'sp_login_shortcode',
-				'description'   => __( "This sidebar does not act as a normal sidebar. It is a stand-in used to make the shortcode for Nice Login Widget available. Just drag the Nice Login Widget into the sidebar, then you can use the [sp_login_widget] shortcode in any page or post.", 'pwLogWi' ),
+				'description'   => __( "This sidebar does not act as a normal sidebar. It is a stand-in used to make the shortcode for Nice Login Widget available. Just drag the Nice Login Widget into the sidebar, then you can use the [sp_login_shortcode] shortcode in any page or post.", 'pwLogWi' ),
 				'class'         => 'sp-shortcode-sidebar',
 				'before_widget' => '<div id="%1$s" class="widget %2$s" style="display: inline-block">',
 				'after_widget'  => '</div>',
@@ -75,9 +75,9 @@ class SP_Nice_Login_Widget
 	}
 	
 	public static function sp_login_shortcode(){
-		
+		ob_start();
 		dynamic_sidebar('sp_login_shortcode');
-		
+		return ob_get_clean();
 	}
 	
 	public static function ajax_authenticate_users(){
@@ -194,6 +194,9 @@ class Pw_Login_Widget extends WP_Widget
 		add_thickbox();
 		?>
 			<h3><?php _e('Widget Options', 'pwLogWi')?></h3>
+			<p>  
+    		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><strong><?php _e('Title:', 'pwLogWi'); ?></strong></label>  
+    		<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 			<p>
 			<label for="<?php echo $this->get_field_id("css_class"); ?>"><strong><?php _e('CSS class name: ', 'pwLogWi') ?></strong></label>
 			<input type="text" id="<?php echo $this->get_field_id("css_class"); ?>" name="<?php echo $this->get_field_name("css_class"); ?>" value="<?php echo $css_class; ?>" >
@@ -254,7 +257,7 @@ class Pw_Login_Widget extends WP_Widget
 			</div>
 			
 			</div>
-			<a href="http://superplug.in/power-widgets?utm_source=nice_login_widget__inSidebars_links&utm_medium=banner&utm_campaign=Nice+Login+Widget" target="_blank"><img src="<?php echo plugins_url("images/nlw-promo.jpg", __FILE__) ?>" style="border: 1px #dfdfdf solid; border-radius: 4px;"></a>
+			<a href="http://superplug.in/product/power-widgets/?utm_source=nice_login_widget__inSidebars_links&utm_medium=banner&utm_campaign=Nice+Login+Widget" target="_blank"><img src="<?php echo plugins_url("images/nlw-promo.jpg", __FILE__) ?>" style="border: 1px #dfdfdf solid; border-radius: 4px;"></a>
 			
 			<?php 
 			wp_nonce_field(plugin_basename( __FILE__ ), 'pwLogWi_noncename');
@@ -289,6 +292,7 @@ class Pw_Login_Widget extends WP_Widget
 			if (wp_verify_nonce($_POST['pwLogWi_noncename'], plugin_basename( __FILE__ ))){
 				
 				$instance = array();
+				$instance['title'] = strip_tags( $new_instance['title'] );
 				$instance['css_class'] = strip_tags( $new_instance['css_class'] );
 				$instance['include_remember_me'] = strip_tags( $new_instance['include_remember_me'] );
 				$instance['default_form'] = strip_tags($new_instance['default_form']);
@@ -358,6 +362,13 @@ class Pw_Login_Widget extends WP_Widget
 
 			$before_widget = preg_replace('/class="/', 'class="'.$instance['css_class'].' ', $before_widget, 1);
 			echo $before_widget;
+			
+			if ( $title ){
+				echo $before_title . $title . $after_title;
+			}
+			if (isset($instance['title'])){
+				echo $before_title . $instance['title'] . $after_title;
+			}
 			
 			if (isset($instance['css_class'])){
 				$css_class = $instance[ 'css_class' ];

@@ -134,6 +134,32 @@ function wpuf_settings_fields() {
                 'default' => 'on'
             ),
             array(
+                'name' => 'insert_photo_size',
+                'label' => __( 'Insert Photo image size', 'wpuf' ),
+                'desc' => __( 'Default image size of "<strong>Insert Photo</strong>" button in post content area', 'wpuf' ),
+                'type' => 'select',
+                'options' => wpuf_get_image_sizes(),
+                'default' => 'thumbnail'
+            ),
+            array(
+                'name' => 'insert_photo_type',
+                'label' => __( 'Insert Photo image type', 'wpuf' ),
+                'desc' => __( 'Default image type of "<strong>Insert Photo</strong>" button in post content area', 'wpuf' ),
+                'type' => 'select',
+                'options' => array(
+                    'image' => __( 'Image only', 'wpuf' ),
+                    'link' => __( 'Image with link', 'wpuf' )
+                ),
+                'default' => 'link'
+            ),
+            array(
+                'name' => 'default_post_form',
+                'label' => __( 'Default Post Form', 'wpuf' ),
+                'desc' => __( 'Fallback form for post editing if no associated form found', 'wpuf' ),
+                'type' => 'select',
+                'options' => wpuf_get_pages( 'wpuf_forms' )
+            ),
+            array(
                 'name' => 'recaptcha_public',
                 'label' => __( 'reCAPTCHA Public Key', 'wpuf' ),
             ),
@@ -170,6 +196,13 @@ function wpuf_settings_fields() {
                     'yes' => __( 'Yes', 'wpuf' ),
                     'no' => __( 'No', 'wpuf' )
                 )
+            ),
+            array(
+                'name' => 'disable_pending_edit',
+                'label' => __( 'Pending Post Edit', 'wpuf' ),
+                'desc' => __( 'Disable post editing while post in "pending" status', 'wpuf' ),
+                'type' => 'checkbox',
+                'default' => 'on'
             ),
             array(
                 'name' => 'per_page',

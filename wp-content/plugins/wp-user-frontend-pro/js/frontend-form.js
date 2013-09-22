@@ -423,9 +423,13 @@
 
             $(this).parents('li').find('.wpuf-payment-instruction').slideDown(250);
         });
-
-        // click the first one
-        $('ul.wpuf-payment-gateways li').first().find('input[type=radio]').click()
+        
+        if( !$('ul.wpuf-payment-gateways li').find('input[type=radio]').is(':checked') ) {
+            $('ul.wpuf-payment-gateways li').first().find('input[type=radio]').click()
+        } else {
+            var el = $('ul.wpuf-payment-gateways li').find('input[type=radio]:checked');
+            el.parents('li').find('.wpuf-payment-instruction').slideDown(250);
+        }
     });
 
 })(jQuery);

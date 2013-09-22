@@ -514,7 +514,7 @@ class WPUF_Admin_Form {
      */
     function form_settings_posts() {
         global $post;
-
+        
         $form_settings = get_post_meta( $post->ID, 'wpuf_form_settings', true );
 
         $restrict_message = __( "This page is restricted. Please Log in / Register to view this page.", 'wpuf' );
@@ -535,6 +535,7 @@ class WPUF_Admin_Form {
         $update_message = isset( $form_settings['update_message'] ) ? $form_settings['update_message'] : __( 'Post updated successfully', 'wpuf' );
         $page_id = isset( $form_settings['page_id'] ) ? $form_settings['page_id'] : 0;
         $url = isset( $form_settings['url'] ) ? $form_settings['url'] : '';
+        $comment_status = isset( $form_settings['comment_status'] ) ? $form_settings['comment_status'] : 'open';
 
         $submit_text = isset( $form_settings['submit_text'] ) ? $form_settings['submit_text'] : __( 'Submit', 'wpuf' );
         $draft_text = isset( $form_settings['draft_text'] ) ? $form_settings['draft_text'] : __( 'Save Draft', 'wpuf' );
@@ -717,6 +718,16 @@ class WPUF_Admin_Form {
                 </td>
             </tr>
 
+            <tr class="wpuf-comment">
+                <th><?php _e( 'Comment Status', 'wpuf' ); ?></th>
+                <td>
+                    <select name="wpuf_settings[comment_status]">
+                        <option value="open" <?php selected( $comment_status, 'open'); ?>><?php _e('Open'); ?></option>
+                        <option value="closed" <?php selected( $comment_status, 'closed'); ?>><?php _e('Closed'); ?></option>
+                    </select>
+                </td>
+            </tr>
+
             <tr class="wpuf-submit-text">
                 <th><?php _e( 'Submit Post Button text', 'wpuf' ); ?></th>
                 <td>
@@ -765,10 +776,12 @@ class WPUF_Admin_Form {
                     <select name="wpuf_settings[edit_post_status]">
                         <?php
                         $statuses = get_post_statuses();
-
+                        
                         foreach ($statuses as $status => $label) {
                             printf('<option value="%s"%s>%s</option>', $status, selected( $post_status_selected, $status, false ), $label );
                         }
+                        
+                        printf( '<option value="_nochange"%s>%s</option>', selected( $post_status_selected, '_nochange', false ), __( 'No Change', 'wpuf' ) );
                         ?>
                     </select>
                 </td>

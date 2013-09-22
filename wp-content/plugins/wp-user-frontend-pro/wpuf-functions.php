@@ -203,7 +203,7 @@ function wpuf_get_pages( $post_type = 'page' ) {
     global $wpdb;
 
     $array = array();
-    $pages = get_pages( array('post_type' => $post_type) );
+    $pages = get_posts( array('post_type' => $post_type, 'numberposts' => -1) );
     if ( $pages ) {
         foreach ($pages as $page) {
             $array[$page->ID] = $page->post_title;
@@ -333,10 +333,14 @@ class WPUF_Walker_Category_Checklist extends Walker {
  * @param int $post_id
  * @param array $selected_cats
  */
-function wpuf_category_checklist( $post_id = 0, $selected_cats = false, $tax = 'category', $exclude = false, $attr = array() ) {
+function wpuf_category_checklist( $post_id = 0, $selected_cats = false, $attr = array() ) {
     require_once ABSPATH . '/wp-admin/includes/template.php';
 
     $walker = new WPUF_Walker_Category_Checklist();
+    
+    $exclude_type = isset( $attr['exclude_type'] ) ? $attr['exclude_type'] : 'exclude';
+    $exclude = $attr['exclude'];
+    $tax = $attr['name'];
 
     $args = array(
         'taxonomy' => $tax,
@@ -349,15 +353,14 @@ function wpuf_category_checklist( $post_id = 0, $selected_cats = false, $tax = '
     } else {
         $args['selected_cats'] = array();
     }
-
+    
     $categories = (array) get_terms( $tax, array(
-        'get' => 'all',
         'hide_empty' => false,
-        'exclude' => $exclude,
+        $exclude_type => (int) $exclude,
         'orderby' => isset( $attr['orderby'] ) ? $attr['orderby'] : 'name',
         'order' => isset( $attr['order'] ) ? $attr['order'] : 'ASC',
     ) );
-
+    
     echo '<ul class="wpuf-category-checklist">';
     echo call_user_func_array( array(&$walker, 'walk'), array($categories, 0, $args) );
     echo '</ul>';
@@ -840,4 +843,43 @@ function wpuf_has_shortcode( $shortcode = '', $post_id = false ) {
     }
   
     return $found;
+}
+
+/**
+ * Get attachment ID from a URL
+ * 
+ * @since 2.1.8
+ * 
+ * @link http://philipnewcomer.net/2012/11/get-the-attachment-id-from-an-image-url-in-wordpress/ Original Implementation
+ * 
+ * @global type $wpdb
+ * @param type $attachment_url
+ * @return type
+ */
+function wpuf_get_attachment_id_from_url( $attachment_url = '' ) {
+
+    global $wpdb;
+    $attachment_id = false;
+
+    // If there is no url, return.
+    if ( '' == $attachment_url )
+        return;
+
+    // Get the upload directory paths
+    $upload_dir_paths = wp_upload_dir();
+
+    // Make sure the upload path base directory exists in the attachment URL, to verify that we're working with a media library image
+    if ( false !== strpos( $attachment_url, $upload_dir_paths['baseurl'] ) ) {
+
+        // If this is the URL of an auto-generated thumbnail, get the URL of the original image
+        $attachment_url = preg_replace( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i', '', $attachment_url );
+
+        // Remove the upload path base directory from the attachment URL
+        $attachment_url = str_replace( $upload_dir_paths['baseurl'] . '/', '', $attachment_url );
+
+        // Finally, run a custom database query to get the attachment ID from the modified attachment URL
+        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT wposts.ID FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta WHERE wposts.ID = wpostmeta.post_id AND wpostmeta.meta_key = '_wp_attached_file' AND wpostmeta.meta_value = '%s' AND wposts.post_type = 'attachment'", $attachment_url ) );
+    }
+
+    return $attachment_id;
 }

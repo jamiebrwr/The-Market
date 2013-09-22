@@ -38,10 +38,17 @@ class WPUF_Upload {
             $response = array( 'success' => true );
 
             if ($image_only) {
-                $response['html'] = wp_get_attachment_image( $attach['attach_id'], 'full' );
+                $image_size = wpuf_get_option( 'insert_photo_size', 'wpuf_general', 'thumbnail' );
+                $image_type = wpuf_get_option( 'insert_photo_type', 'wpuf_general', 'link' );
+                
+                if ( $image_type == 'link' ) {
+                    $response['html'] = wp_get_attachment_link( $attach['attach_id'], $image_size );
+                } else {
+                    $response['html'] = wp_get_attachment_image( $attach['attach_id'], $image_size );
+                }
+                
             } else {
                 $response['html'] = $this->attach_html( $attach['attach_id'] );
-                // $response['html'] = wp_get_attachment_image( $attach['attach_id'], 'thumbnail' );
             }
 
             echo $response['html'];

@@ -1,6 +1,8 @@
 <?php
 
 class WPUF_Frontend_Form_Post extends WPUF_Render_Form {
+    
+    private static $_instance;
 
     function __construct() {
 
@@ -16,6 +18,14 @@ class WPUF_Frontend_Form_Post extends WPUF_Render_Form {
 
         // form preview
         add_action( 'wp_ajax_wpuf_form_preview', array($this, 'preview_form') );
+    }
+    
+    public static function init() {
+        if ( !self::$_instance ) {
+            self::$_instance = new self;
+        }
+
+        return self::$_instance;
     }
 
     /**
@@ -84,9 +94,20 @@ class WPUF_Frontend_Form_Post extends WPUF_Render_Form {
 
         $form_id = get_post_meta( $post_id, self::$config_id, true );
         $form_settings = get_post_meta( $form_id, 'wpuf_form_settings', true );
+        
+        // fallback to default form
+        if ( !$form_id ) {
+            $form_id = wpuf_get_option( 'default_post_form', 'wpuf_general' );
+        }
 
         if ( !$form_id ) {
             return '<div class="wpuf-info">' . __( "I don't know how to edit this post, I don't have the form ID", 'wpuf' ) . '</div>';
+        }
+        
+        $disable_pending_edit = wpuf_get_option( 'disable_pending_edit', 'wpuf_dashboard', 'on' );
+        
+        if ( $curpost->post_status == 'pending' && $disable_pending_edit == 'on' ) {
+            return '<div class="wpuf-info">' . __( 'You can\'t edit a post while in pending mode.', 'wpuf' );
         }
 
         if ( isset( $_GET['msg'] ) && $_GET['msg'] == 'post_updated' ) {
@@ -211,6 +232,17 @@ class WPUF_Frontend_Form_Post extends WPUF_Render_Form {
             $postarr['post_date'] = $_POST['post_date'];
             $postarr['comment_status'] = $_POST['comment_status'];
             $postarr['post_author'] = $_POST['post_author'];
+            
+            if ( $form_settings['edit_post_status'] == '_nochange') {
+                $postarr['post_status'] = get_post_field( 'post_status', $_POST['post_id'] );
+            } else {
+                $postarr['post_status'] = $form_settings['edit_post_status'];
+            }
+            
+        } else {
+            if ( isset( $form_settings['comment_status'] ) ) {
+                $postarr['comment_status'] = $form_settings['comment_status'];
+            }
         }
 
         // check the form status, it might be already a draft
@@ -238,7 +270,6 @@ class WPUF_Frontend_Form_Post extends WPUF_Render_Form {
 
         // ############ It's Time to Save the World ###############
         if ( $is_update ) {
-            $postarr['post_status'] = $form_settings['edit_post_status'];
             $postarr = apply_filters( 'wpuf_update_post_args', $postarr, $form_id, $form_settings, $form_vars );
         } else {
             $postarr = apply_filters( 'wpuf_add_post_args', $postarr, $form_id, $form_settings, $form_vars );
@@ -256,6 +287,25 @@ class WPUF_Frontend_Form_Post extends WPUF_Render_Form {
             if ( isset( $form_settings['post_format'] ) && $form_settings['post_format'] != '0' ) {
                 if ( post_type_supports( $form_settings['post_type'], 'post-formats' ) ) {
                     set_post_format( $post_id, $form_settings['post_format'] );
+                }
+            }
+            
+            // find our if any images in post content and associate them
+            if ( !empty( $postarr['post_content'] ) ) {
+                $dom = new DOMDocument();
+                $dom->loadHTML( $postarr['post_content'] );
+                $images = $dom->getElementsByTagName( 'img' );
+
+                if ( $images->length ) {
+                    foreach ($images as $img) {
+                        $url = $img->getAttribute( 'src' );
+                        $url = str_replace(array('"', "'", "\\"), '', $url);
+                        $attachment_id = wpuf_get_attachment_id_from_url( $url );
+
+                        if ( $attachment_id ) {
+                            wpuf_associate_attachment( $attachment_id, $post_id );
+                        }
+                    }
                 }
             }
 
