@@ -282,3 +282,6 @@ function wpse_74054_add_author_woocommerce() {
     add_post_type_support( 'product', 'author' );
 }
 
+
+// Display 24 products per page. Goes in functions.php
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 15;' ), 20 );
