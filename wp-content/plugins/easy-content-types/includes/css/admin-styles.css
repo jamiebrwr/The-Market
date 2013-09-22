@@ -1,0 +1,49 @@
+#ecpt-wrap	{ margin: 0 0 30px; }
+#ecpt-wrap td	{ padding-top: 12px; padding-bottom: 12px; }
+#ecpt-wrap fieldset	{ border: 1px solid #ccc; padding: 0 20px 10px;}
+#ecpt-wrap label	{ float: left; margin: 0 8px 0 0; width: 150px; line-height: 20px;}
+#ecpt-wrap.ecpt-settings label	{ float: none; margin: 0 ; width: auto;}
+#ecpt-wrap .ecpt-text	{ float: left; margin: 0 8px 0 0; width: 150px; height: 24px;}
+#ecpt-wrap .ecpt-textarea	{ float: left; margin: 0 8px 0 0; width: 150px; height: 80px;}
+#ecpt-wrap .ecpt-multi-select	{ float: left; margin: 0 8px 0 0;  height: 100px; }
+#ecpt-wrap .ecpt-checkbox	{ float: left; margin: 0; width: 20px; cursor: pointer; position: relative; top: 5px; text-align: left;}
+#ecpt-wrap .disabled { filter: alpha(opacity=80); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5; }
+#ecpt-wrap .ecpt-description	{ margin: 0; line-height: 24px;}
+#ecpt-wrap .ecpt-upload-desc	{ margin: 8px 0 0; }
+#ecpt-submit	{ margin: 20px 0 20px 0; }
+#ecpt-wrap span.required	{ color: red; display: inline; width: auto; float: none; }
+#ecpt-wrap .ecpt-atts	{ float: left; margin-right: 15px;}
+#ecpt-wrap .ecpt-atts div { height: 40px;}
+#ecpt-wrap .ecpt-atts input[type=checkbox]	{vertical-align: top; width: 15px; float: left; margin: 0 10px 0 0; }
+#ecpt-wrap .ecpt-atts label	{ width: 150px; display: inline-block; float: left; line-height: 15px; }
+#ecpt-wrap .ecpt_menu_icon { float: left; margin: 0 10px 0 0; }
+#ecpt-wrap .ecpt_upload_image{ width: 300px; float: left; margin: 0 10px 0 0;}
+#ecpt-wrap .ecpt_upload_image_button{ width: auto; float: left; }
+#ecpt-wrap #posttype-atts span	{ display: inline; width: auto; margin: 0 5px 0 0;}
+#ecpt-wrap #posttype-atts span:last-child em	{ display: none; }
+#ecpt-wrap .ecpt_menu_icon	{ position: relative; top: 3px; }
+#ecpt-wrap .no-float	{ float: none; }
+.dragHandle	{ cursor: move; display: block; margin: 0 10px 0 0; float: left; height: 20px; width: 20px; background: url('../images/cross-hair.png'); }
+#ecpt-wrap .inset { border-left: 1px solid #ccc; padding-left: 20px; }
+.ecpt-help-page ol, .ecpt-help-page ul		{ margin: 5px 0 5px 15px; }
+.ecpt-help-page ul li	{ display: list-item; list-style: disc inside; }
+.ecpt-help-page ol li	{ display: list-item; list-style: roman outside; margin: 5px 0 5px 15px; }
+.ecpt-help-page li ul	{ margin: 5px 0 5px 25px; }
+.ecpt-help-page li ul li	{ list-style-type: circle;}
+.ecpt-help-page h3	{ border-bottom: 1px solid #ccc; padding: 20px 0; font-size: 22px; width: 620px; }
+.ecpt-help-page pre	{ margin: 8px 15px; font-size: 11px; }
+.ecpt-disabled, .ecpt-rich-editor-disabled, .ecpt-max-disabled	{ display: none; }
+.ecpt_section	{ width: 800px; background: #f0f0f0; padding: 10px; border-bottom: 1px solid #ccc; }
+.ecpt_section em { font-weight: bold; }
+.ecpt_title	{ font-size: 16px; }
+.ecpt-clearfix:after	{ display: block; visibility: hidden; clear: both; content: "."; height: 0; float: none; }
+.ecpt-row	{ }
+.ecpt-box	{ float: left; margin: 0 20px 20px 0; width: 300px; border: 1px solid #ccc; padding: 0 10px; height: 260px; background: #f5f5f5; }
+.ecpt-box-long	{  margin: 0 20px 20px 0; width: 642px; border: 1px solid #ccc; padding: 0 10px; background: #f5f5f5; }
+.ecpt-box p	{ line-height: 18px; }
+
+/*export display*/
+.ecpt_export_code { background: url(../images/code-bg.gif); line-height: 20px; white-space: normal; overflow: auto; float: left; margin: 0;}
+
+/* meta box styles */
+.ecpt_repeatable_wrapper, .ecpt_repeatable_upload_wrapper { margin: 0 0 8px; }

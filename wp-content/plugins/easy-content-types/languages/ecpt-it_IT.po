@@ -1,0 +1,1398 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ecpt\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-19 10:18-0600\n"
+"PO-Revision-Date: 2012-06-05 12:53+0100\n"
+"Last-Translator: Pete <peterprossedi@hotmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: includes\n"
+
+#: includes/export-admin.php:24
+msgid "Export Post Types, Taxonomies, and Metaboxes"
+msgstr "Esportare i Post Type, Taxonomies, e Metabox"
+
+#: includes/export-admin.php:25
+msgid "The code provided on this page will allow you to \"export\" your created post types, taxonomies, and metaboxes to other WordPress installs very easily. Simply copy the given code and paste it into your theme's functions.php."
+msgstr "Il codice fornito in questa pagina vi permetterà di  \"export \" i post type create, taxonomies, e ad altri metaboxes WordPress installa molto facilmente. Basta copiare il codice dato e incollarlo in functions.php del vostro tema."
+
+#: includes/export-admin.php:34
+msgid "Custom Post Type Export Code"
+msgstr "Codice di Esportazione per le Custom Post Type"
+
+#: includes/export-admin.php:133
+msgid "Taxonomy Export Code"
+msgstr " Codice di Esportazione per Taxonomy"
+
+#: includes/export-admin.php:198
+msgid "Meta Box Export Code"
+msgstr " Codice di Esportazione per le Meta Box"
+
+#: includes/help-page.php:8
+msgid "Easy Custom Content Types Help"
+msgstr "Aiuto per Easy Custom Content Types"
+
+#: includes/help-page.php:9
+msgid "Index"
+msgstr "Indice"
+
+#: includes/help-page.php:11
+#: includes/help-page.php:50
+msgid "Post Types"
+msgstr "Post Types"
+
+#: includes/help-page.php:13
+#: includes/help-page.php:52
+msgid "Creating Post Types"
+msgstr "Creazione Post Type"
+
+#: includes/help-page.php:14
+#: includes/help-page.php:64
+msgid "Post Type Labels"
+msgstr "Etichette Post Type"
+
+#: includes/help-page.php:15
+#: includes/help-page.php:71
+msgid "Post Type Options"
+msgstr "Opzioni Post Type"
+
+#: includes/help-page.php:16
+#: includes/help-page.php:81
+msgid "Post Type Support Options"
+msgstr "Post Type Opzioni di Supporto"
+
+#: includes/help-page.php:17
+#: includes/help-page.php:93
+msgid "Post Type Advanced Options"
+msgstr "Post Type Opzioni Avanzate"
+
+#: includes/help-page.php:18
+#: includes/help-page.php:120
+msgid "Editing Post Types"
+msgstr "Modifica Post Types"
+
+#: includes/help-page.php:19
+#: includes/help-page.php:129
+msgid "Theme Template Files"
+msgstr "Tema Template File"
+
+#: includes/help-page.php:20
+#: includes/help-page.php:134
+msgid "Template Hierarchy"
+msgstr "Template Gerarchia"
+
+#: includes/help-page.php:21
+#: includes/help-page.php:145
+msgid "Querying Post Types"
+msgstr "Esecuzione di query sui post type"
+
+#: includes/help-page.php:24
+#: includes/help-page.php:202
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: includes/help-page.php:26
+#: includes/help-page.php:203
+msgid "Creating Taxonomies"
+msgstr "La creazione di Taxonomies"
+
+#: includes/help-page.php:27
+#: includes/help-page.php:214
+msgid "Taxonomy Objects"
+msgstr "Oggetti Taxonomy"
+
+#: includes/help-page.php:28
+#: includes/help-page.php:221
+msgid "Taxonomy Options"
+msgstr "Opzioni Tamxonomy"
+
+#: includes/help-page.php:29
+#: includes/help-page.php:239
+msgid "Editing Taxonomies"
+msgstr "Modifica Tassonomie"
+
+#: includes/help-page.php:30
+#: includes/help-page.php:248
+msgid "Displaying Taxonomy Info"
+msgstr "Visualizzazione Info Tassonomia"
+
+#: includes/help-page.php:31
+#: includes/help-page.php:268
+msgid "Displaying Posts with a Taxonomy"
+msgstr "Visualizzazione Post con una tassonomia"
+
+#: includes/help-page.php:32
+#: includes/help-page.php:278
+msgid "Adding Default Category and Post Tags to Custom Post Types"
+msgstr "Aggiungere le default categoria  e Tags con i tuoi Post Type"
+
+#: includes/help-page.php:33
+#: includes/help-page.php:283
+msgid "Setting {post-type}/{taxonomy} permalink structures"
+msgstr "Impostazione {post-type}/{taxonomy} strutture permalink"
+
+#: includes/help-page.php:36
+#: includes/help-page.php:305
+msgid "Meta Boxes"
+msgstr "Meta Boxes"
+
+#: includes/help-page.php:38
+#: includes/help-page.php:306
+msgid "Creating Meta Boxes"
+msgstr "Creazione Meta Boxes"
+
+#: includes/help-page.php:39
+#: includes/help-page.php:315
+msgid "Selecting Meta Box Location"
+msgstr "Selezione Location Meta Box"
+
+#: includes/help-page.php:40
+#: includes/help-page.php:335
+msgid "Editing Meta Boxes"
+msgstr "Modifica Meta Boxes"
+
+#: includes/help-page.php:41
+#: includes/help-page.php:342
+msgid "Adding / Editing Fields to Meta Box"
+msgstr "Aggiungere / Modifica dei campi alla Meta Box"
+
+#: includes/help-page.php:42
+#: includes/help-page.php:355
+msgid "Field Types"
+msgstr "Field Types"
+
+#: includes/help-page.php:43
+#: includes/help-page.php:372
+msgid "Displaying Field Info in Your template"
+msgstr "Visualizzazione Info campo nel template"
+
+#: includes/help-page.php:46
+#: includes/help-page.php:442
+msgid "User Access"
+msgstr "Accesso Utente"
+
+#: includes/help-page.php:52
+#: includes/help-page.php:64
+#: includes/help-page.php:71
+#: includes/help-page.php:81
+#: includes/help-page.php:93
+#: includes/help-page.php:120
+#: includes/help-page.php:129
+#: includes/help-page.php:134
+#: includes/help-page.php:145
+#: includes/help-page.php:203
+#: includes/help-page.php:214
+#: includes/help-page.php:221
+#: includes/help-page.php:239
+#: includes/help-page.php:248
+#: includes/help-page.php:268
+#: includes/help-page.php:278
+#: includes/help-page.php:283
+#: includes/help-page.php:306
+#: includes/help-page.php:315
+#: includes/help-page.php:335
+#: includes/help-page.php:342
+#: includes/help-page.php:355
+#: includes/help-page.php:372
+#: includes/help-page.php:443
+msgid "Back To Top"
+msgstr "In Alto"
+
+#: includes/help-page.php:443
+msgid "User Level Access"
+msgstr "Livello di accesso utente"
+
+#: includes/meta-add-new-field-form.php:2
+#: includes/meta-add-new-form.php:2
+msgid "Create New Metabox Field"
+msgstr "Crea Nuova Campo Metabox"
+
+#: includes/meta-add-new-field-form.php:5
+#: includes/meta-add-new-form.php:5
+msgid "Field Info"
+msgstr "Info del Campo"
+
+#: includes/meta-add-new-field-form.php:18
+#: includes/meta-add-new-form.php:18
+msgid "Field Name"
+msgstr "Nome del Campo"
+
+#: includes/meta-add-new-field-form.php:20
+#: includes/meta-add-new-form.php:20
+msgid "This is the main name of the field"
+msgstr "Questo è il nome principale del campo"
+
+#: includes/meta-add-new-field-form.php:20
+#: includes/meta-add-new-form.php:20
+msgid "This is the name that will be used to display field data on the site, and also will be display next to the field in the post editor"
+msgstr "Questo è il nome che verrà utilizzato per visualizzare i dati dei campi sul sito, e sarà visualizzato accanto al campo nel post editor"
+
+#: includes/meta-add-new-field-form.php:22
+msgid "Field ID"
+msgstr "ID Campo"
+
+#: includes/meta-add-new-field-form.php:24
+msgid "This is the unique id of the field (optional)"
+msgstr "Questo è l'ID univoco del campo (opzionale)"
+
+#: includes/meta-add-new-field-form.php:24
+msgid "This is what will be used to retrieve information from this field with the short codes and template tags. If not specified, the field Name will be used (with all spaces and capitalization replaced)"
+msgstr "Questo è ciò che sarà utilizzato per recuperare le informazioni da questo campo con i shortcodei e tag template. Se non vieni specificato, il nome del campo verrà utilizzato (con tutti gli spazi e di capitalizzazione sostituito)"
+
+#: includes/meta-add-new-field-form.php:27
+#: includes/meta-add-new-form.php:22
+msgid "Field Description"
+msgstr "Descrizione Campo"
+
+#: includes/meta-add-new-field-form.php:29
+#: includes/meta-add-new-form.php:24
+msgid "The field description"
+msgstr "descrizione del campo"
+
+#: includes/meta-add-new-field-form.php:29
+#: includes/meta-add-new-form.php:24
+msgid "This is description of the field that will be shown beneath the field in the editor"
+msgstr "Questa è la descrizione del campo, che verrà mostrato sotto il campo nell'editor"
+
+#: includes/meta-add-new-field-form.php:32
+#: includes/meta-add-new-form.php:26
+#: includes/meta-field-edit.php:36
+#: includes/meta-fields-edit.php:13
+#: includes/meta-fields-edit.php:25
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/meta-add-new-field-form.php:38
+#: includes/meta-add-new-form.php:32
+msgid "The type of field you would like to insert"
+msgstr "Il tipo di campo che si desidera inserire"
+
+#: includes/meta-add-new-field-form.php:38
+#: includes/meta-add-new-form.php:32
+msgid "If you choose \"select\" or \"radio\" a new input will become available for you to enter the options"
+msgstr "Se si sceglie \"select\" o \"radio\" un nuovo input sarà a vostra disposizione per accedere alle opzioni"
+
+#: includes/meta-add-new-field-form.php:41
+#: includes/meta-add-new-form.php:35
+#: includes/meta-fields-edit.php:15
+#: includes/meta-fields-edit.php:27
+msgid "Options"
+msgstr "Opzioni"
+
+#: includes/meta-add-new-field-form.php:43
+#: includes/meta-add-new-form.php:37
+msgid "Options for select and radio fields. Separate options with a comma"
+msgstr "Opzioni per selezionare e campi radio. Separare le opzioni con una virgola"
+
+#: includes/meta-add-new-field-form.php:43
+#: includes/meta-add-new-form.php:37
+msgid "A sample set of options would look like this (without the quotes): \"option 1, option 2, option 3\""
+msgstr "Un campione di opzioni sarebbe simile a questa (senza le virgolette): \"opzione 1, opzione 2, opzione 3\""
+
+#: includes/meta-add-new-field-form.php:46
+#: includes/meta-add-new-form.php:40
+msgid "Rich Editor"
+msgstr "Rich Editore"
+
+#: includes/meta-add-new-field-form.php:48
+#: includes/meta-add-new-form.php:42
+msgid "Enable the Rich Editor for this textarea?"
+msgstr "Abilitare l'Editore per questa area di testo?"
+
+#: includes/meta-add-new-field-form.php:48
+#: includes/meta-add-new-form.php:42
+msgid "This option will enable \"rich\" formatting controls, such as italic, bold, alignment, link, etc"
+msgstr "Questa opzione permetterà \"ricchi\" controlli di formattazione, quali corsivo, grassetto, allineamento, link, etc"
+
+#: includes/meta-add-new-field-form.php:52
+#: includes/meta-add-new-form.php:46
+msgid "Max Value"
+msgstr "Max Valore"
+
+#: includes/meta-add-new-field-form.php:54
+#: includes/meta-add-new-form.php:48
+msgid "Enter the maximum value for this slider"
+msgstr "Inserire il valore massimo per questo cursore"
+
+#: includes/meta-add-new-field-form.php:54
+#: includes/meta-add-new-form.php:48
+msgid "This is the highest value that the slider can \"slide\" too."
+msgstr "Questo è il valore più alto che il cursore può \"arrivare\" ."
+
+#: includes/meta-field-edit.php:3
+msgid "Edit Field"
+msgstr "Modifica Campo"
+
+#: includes/meta-field-edit.php:3
+#: includes/meta-fields-edit.php:5
+msgid "Go Back"
+msgstr "In dietro"
+
+#: includes/meta-field-edit.php:7
+msgid "Field Updated"
+msgstr "Campo Aggiornato"
+
+#: includes/meta-field-edit.php:18
+#: includes/meta-fields-edit.php:11
+#: includes/meta-fields-edit.php:23
+msgid "Name"
+msgstr "Nome"
+
+#: includes/meta-field-edit.php:22
+msgid "The field name is used displayed next to the field in the meta box"
+msgstr "Il nome del campo viene utilizzato visualizzato accanto al campo nella meta box"
+
+#: includes/meta-field-edit.php:27
+#: includes/meta-fields-edit.php:12
+#: includes/meta-fields-edit.php:24
+msgid "ID"
+msgstr "ID"
+
+#: includes/meta-field-edit.php:31
+msgid "The field id is used for displaying field content with shortcodes and template tags"
+msgstr "Il campo ID viene utilizzato per visualizzare il contenuto con shortcodes e tag per i template"
+
+#: includes/meta-field-edit.php:46
+msgid "The field type determines what kind of field is displayed"
+msgstr "Il Field Type determina il tipo di campo viene visualizzato"
+
+#: includes/meta-field-edit.php:51
+#: includes/meta-fields-edit.php:14
+#: includes/meta-fields-edit.php:26
+msgid "Description"
+msgstr "Descrizione"
+
+#: includes/meta-field-edit.php:55
+msgid "The field description is display beneath the field in the metabox"
+msgstr "La descrizione del campo viene visualizzato sotto il campo nel METABOX"
+
+#: includes/meta-field-edit.php:60
+msgid "Field Options"
+msgstr "Opzioni dei campi"
+
+#: includes/meta-field-options.php:7
+msgid "Enable the rich editor?"
+msgstr "Attivare l'editor di testo RTF?"
+
+#: includes/meta-field-options.php:16
+#: includes/meta-field-options.php:26
+msgid "Set the available field options here, each separated by a comma."
+msgstr "Impostare le opzioni disponibili qui sul campo, ognuno separato da una virgola."
+
+#: includes/meta-field-options.php:36
+msgid "Enter the maximum value accepted here"
+msgstr "Inserire il valore massimo accettato qui"
+
+#: includes/meta-fields-edit.php:4
+msgid "Edit Fields for"
+msgstr "Modifica campi per"
+
+#: includes/meta-fields-edit.php:10
+#: includes/meta-fields-edit.php:22
+msgid "Order"
+msgstr "Ordine"
+
+#: includes/meta-fields-edit.php:16
+#: includes/meta-fields-edit.php:28
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/meta-fields-edit.php:17
+#: includes/meta-fields-edit.php:29
+#: includes/meta-fields-edit.php:63
+msgid "Delete"
+msgstr "Cancella"
+
+#: includes/meta-fields-edit.php:62
+msgid "Edit"
+msgstr "Modifica"
+
+#: includes/metabox-add-new.php:2
+msgid "Create New Custom Metabox"
+msgstr "Crea un nuovo Metabox "
+
+#: includes/metabox-add-new.php:5
+msgid "Metabox General"
+msgstr "Metabox Generale"
+
+#: includes/metabox-add-new.php:7
+msgid "Metabox Name"
+msgstr "Nome Metabox"
+
+#: includes/metabox-add-new.php:9
+msgid "This is the main name of the metabox"
+msgstr "Questo e il nome pricipale del metabox"
+
+#: includes/metabox-add-new.php:9
+msgid "The metabox name will show up in the header of the box on the editor screen"
+msgstr "Il nome del metabox apparirà nell'header della casella sullo schermo dell'editor"
+
+#: includes/metabox-add-new.php:12
+msgid "Page(s)"
+msgstr "Pagina(e)"
+
+#: includes/metabox-add-new.php:22
+msgid "This is the post type that will use this metabox"
+msgstr "Questo e il post type che questo metabox si usa"
+
+#: includes/metabox-add-new.php:22
+msgid "If you want to put the metabox on the regular Posts screen, then choose \"post\". You can select multiple post types by holding down the Control key (or Command on OS X) then clicking."
+msgstr "Se si desidera inserire il METABOX sullo schermo normale Posts, quindi scegliere  \"post\". È possibile selezionare diversi tipi di messaggio tenendo premuto il tasto Ctrl (o Comando su OS X) piu un  clic."
+
+#: includes/metabox-add-new.php:24
+#: includes/metabox-edit.php:1
+#: includes/metabox-list.php:13
+#: includes/metabox-list.php:24
+msgid "Context"
+msgstr "Contesto"
+
+#: includes/metabox-add-new.php:26
+msgid "normal"
+msgstr "normale"
+
+#: includes/metabox-add-new.php:27
+msgid "advanced"
+msgstr "avanzato"
+
+#: includes/metabox-add-new.php:28
+msgid "side"
+msgstr "lato"
+
+#: includes/metabox-add-new.php:30
+msgid "The location on the editor screen to display the meta box."
+msgstr "La posizione sulla schermata editor per visualizzare il METABOX."
+
+#: includes/metabox-add-new.php:30
+msgid "Advanced / Normal = main column, with Advanced being above Normal. Side = right, narrow column."
+msgstr "Avanzato / Normale = colonna principale, con avanzata sopra normale. Side = destra, colonna stretta."
+
+#: includes/metabox-add-new.php:32
+#: includes/metabox-edit.php:1
+#: includes/metabox-list.php:14
+#: includes/metabox-list.php:25
+msgid "Priority"
+msgstr "Priorita"
+
+#: includes/metabox-add-new.php:34
+msgid "default"
+msgstr "default"
+
+#: includes/metabox-add-new.php:35
+msgid "high"
+msgstr "alto"
+
+#: includes/metabox-add-new.php:36
+msgid "core"
+msgstr "nucleo"
+
+#: includes/metabox-add-new.php:37
+msgid "low"
+msgstr "basso"
+
+#: includes/metabox-add-new.php:39
+msgid "The priority determines how \"high\" the meta box appears in the editor"
+msgstr "La priorità determina come \"alto\" la metabox viene visualizzata nell'editor"
+
+#: includes/metabox-add-new.php:39
+msgid "Metaboxes with \"high\" priorites will appear above boxes with \"default\" priority, for example"
+msgstr "Lo Metabox con \"alto \" priorità apparirà sopra le caselle con la priorità \"default\", per esempio"
+
+#: includes/metabox-add-new.php:42
+#: includes/metabox-edit.php:1
+msgid "Post / Page IDs"
+msgstr "ID Post/Pagine"
+
+#: includes/metabox-add-new.php:44
+msgid "Limit this meta box to specific post / page IDS. Separate each ID by a comma."
+msgstr "Limitare questa meta box a post / ID pagina specifici. Separare ogni ID con una virgola."
+
+#: includes/metabox-add-new.php:44
+msgid "If you want to only display this meta box on specific post / page IDs, then enter the ID numbers here, each one separated by a comma. Leave this field blank to not limit the meta box display."
+msgstr "Se si desidera visualizzare solo questa finestra di meta su specifici di post / pagina ID, quindi immettere i numeri di identificazione qui, ognuno separato da una virgola. Lasciare il campo vuoto per non limitare la visualizzazione del metabox."
+
+#: includes/metabox-add-new.php:49
+msgid "Add Meta Box"
+msgstr "Aggiungi Meta Box"
+
+#: includes/metabox-edit.php:1
+#: includes/metabox-list.php:54
+msgid "Edit Metabox"
+msgstr "Modifica Metabox"
+
+#: includes/metabox-edit.php:1
+msgid "Meta Box updated."
+msgstr "Meta Box aggiornato"
+
+#: includes/metabox-edit.php:1
+msgid "The meta box name is displayed at the top of the meta box on the editor screen"
+msgstr "Il nome dello meta box viene visualizzata nella parte superiore della metabox sulla schermata dell'editore"
+
+#: includes/metabox-edit.php:1
+#: includes/metabox-list.php:12
+#: includes/metabox-list.php:23
+msgid "Page"
+msgstr "Pagina"
+
+#: includes/metabox-edit.php:1
+msgid "The page is the post type that the meta box is displayed on. For example, if you choose \"post\", the meta box will be displayed on the regular post screen. You can select multiple post types by holding down the Control key (or Command on OS X) then clicking."
+msgstr "La pagina è il post type che la metabox viene visualizzata. Ad esempio, se si sceglie  \"post \", la metabox verrà visualizzato sullo schermo post default. È possibile selezionare diversi tipi di post type tenendo premuto il tasto Ctrl (o Comando su OS X) e clic."
+
+#: includes/metabox-edit.php:1
+msgid "The context is the location on the editor screen thatthe metabox will be displayed"
+msgstr "Il contesto è la posizione sulla schermata dell'editor che il METABOX verrà visualizzato"
+
+#: includes/metabox-edit.php:1
+msgid "Priority determines how \"high\" on the editor screen the meta box appears"
+msgstr "La priorità determina come \"alto\" sullo schermo la finestra dello metabox appare"
+
+#: includes/metabox-edit.php:1
+msgid "Limit this meta box to specific posts / pages by entering their ID numbers here. Separate each ID by a comma. Leave blank to add this meta box to all posts / pages."
+msgstr "Limitare questa metabox a post/pagine specifici inserendo i loro numeri di identificazione qui. Separare ogni ID con una virgola. Lascia in vuoto per aggiungere questa metabox per tutti i post / pagine."
+
+#: includes/metabox-edit.php:1
+#: includes/post-types-edit.php:205
+msgid "Update"
+msgstr "Aggiornare"
+
+#: includes/metabox-list.php:1
+msgid "Easy Custom Meta Boxes"
+msgstr "Easy Custom Meta Boxes"
+
+#: includes/metabox-list.php:4
+msgid "Meta Box added. Now you should add some fields to your meta box by clicking \"Edit Fields\""
+msgstr "Meta Box aggiunto. Ora si dovrebbe aggiungere alcuni campi alla tua casella di meta facendo clic su \"Modifica campi\""
+
+#: includes/metabox-list.php:15
+#: includes/metabox-list.php:26
+msgid "Fields"
+msgstr "Campi"
+
+#: includes/metabox-list.php:55
+msgid "Edit Fields"
+msgstr "Modifica Campi"
+
+#: includes/metabox-list.php:56
+msgid "Duplicate"
+msgstr "Duplicare"
+
+#: includes/metabox-list.php:64
+msgid "Click the \"Edit Fields\" link in order to add fields to a meta box"
+msgstr "Fare clic su \"Modifica campi \"  link per aggiungere campi a una meta box"
+
+#: includes/metabox-list.php:65
+msgid "Need help displaying the content from your meta boxes?"
+msgstr "Hai bisogno di aiuto con la visualizzazione del contenuto dei tuoi meta box?"
+
+#: includes/metabox-list.php:65
+msgid "Click here"
+msgstr "Clicka qui"
+
+#: includes/page-home.php:7
+msgid "About Custom Content Types Plugin"
+msgstr "Informazione su Custom Content Types Plugin"
+
+#: includes/page-home.php:10
+msgid "Created By Pippin Williamson"
+msgstr "Creato Da Pippin Williamson"
+
+#: includes/page-home.php:11
+msgid "This plugin is designed to make the life of developers and non-developers alike much easier by providing an easy to use interface for creating custom post types, metaboxes, and taxonomies. By eliminating all of the hassel the create post types, taxonomies, and metaboxes, this plugin will likely become your new best friend."
+msgstr "Questo plugin è stato progettato per rendere la vita degli sviluppatori e non sviluppatori  molto più facile, fornendo un facile da usare l'interfaccia per la creazione di Post Type personalizzati, metaboxes e tassonomie. Eliminando tutto i problemi  del creazione di Post Type, taxonomy e metabox, questo plugin diventerà probabilmente il nuovo migliore amico."
+
+#: includes/page-home.php:12
+msgid "For developers, this plugin has everything you need when it comes to working with these three elements, including auto creation of template files. If you are not a developer, then you will still be able to make full use of this plugin. It is not limited to developers in any way."
+msgstr "Per gli sviluppatori, questo plugin ha tutto il necessario quando si tratta di lavorare con questi tre elementi, tra cui la creazione automatica dei file template. Se non sei uno sviluppatore, allora si sarà ancora in grado di fare pieno uso di questo plugin. Essa non è limitata a sviluppatori in alcun modo."
+
+#: includes/page-home.php:17
+msgid "What are Custom Post Types"
+msgstr "Cosa sono Custom Post Types"
+
+#: includes/page-home.php:18
+msgid "Custom post types are a way for you to logically organize the content within your WordPress powered website. Rather than simply filing all of your content into differently categorized posts or pages, custom post types allow you to define easy-to-understand \"sections\" of your website, such as Books, Music, Podcasts, etc."
+msgstr "Custom post types  sono un modo per organizzare logicamente i contenuti all'interno del tuo sito WordPress. Piuttosto che limitarsi a deposito di tutto il contenuto in posti classificati in modo diverso o pagine, i post type personalizzati consentono di definire facili da capire \"sezioni \" del tuo sito web, come libri, musica, podcast, ecc"
+
+#: includes/page-home.php:21
+msgid "What are Custom Taxonomies"
+msgstr "Cosa sono Custom Taxonomies"
+
+#: includes/page-home.php:22
+msgid "Custom Taxonomies act very similar to the default Categories or Post Tags, with one major distinction: they can be named whatever you choose, allowing you to define an organization system that makes sense for your website. For example, if you run an online music catalog, it would make sense for you be able to organize your products into Genres, Years, and Country; and then each of those into further levels of distinction, such as Hard Rock, Pop, and Classical."
+msgstr "Tassonomie personalizzate agire molto simile alle categorie predefinite o Tags messaggio, con una distinzione fondamentale: possono essere nominati Qualunque cosa scegliate, permettendo di definire un sistema organizzativo che ha senso per il tuo sito. Ad esempio, se si esegue un catalogo di musica online, non avrebbe molto senso per voi essere in grado di organizzare i tuoi prodotti in generi, anni e Paese, e poi ciascuno di questi in ulteriori livelli di distinzione, come ad esempio Hard Rock, Pop, e Classical."
+
+#: includes/page-home.php:27
+msgid "What are Custom Meta Boxes"
+msgstr "Cosa Sono Custom Meta Boxes"
+
+#: includes/page-home.php:28
+msgid "Custom Metaboxes are sets of additional editable fields that may be added to posts, page, and any custom post type. The fields contained within the meta boxes can be used to store any kind of data you choose. They're often used for image thumbnails, portfolio links, author bios, etc. The types of fields that may be included at: single line text inputs, large text areas, checkboxes, radio button groups, and drop down select menus."
+msgstr "I Metabox personalizzati sono gruppi di ulteriori campi modificabili, che possono essere aggiunte ai post, pagine, e qualsiasi custom post type. I campi contenuti all'interno delle metabox può essere utilizzato per memorizzare qualsiasi tipo di dati che si sceglie. Sono spesso utilizzati per le anteprime delle immagini, link portfolio, biografia degli autori, ecc I tipi di campi che possono essere inclusi in: singoli campi di testo, aree di testo di grandi dimensioni, caselle di controllo, gruppi di pulsanti radio e menu a discesa selezionare."
+
+#: includes/page-home.php:31
+msgid "Theme Templates for Custom Content Types"
+msgstr "Template a tema per Custom Content Type"
+
+#: includes/page-home.php:32
+msgid "By separating a site's content into different custom post types, it makes things much easier to organize and understand. Included with the custom post types, are customizable theme templates that are used to display the post types on the front end of the website. This means that you can have one post type displayed in one manner, while another post type is displayed in a completely different way. Everything from layout to colors."
+msgstr "Separando i contenuti di un sito in diverse custom post type, rende le cose molto più facile da organizzare e comprendere. Incluso con i custom post typei, sono modelli tematici personalizzabili che vengono utilizzati per visualizzare i post type sulla parte anteriore del sito. Ciò significa che si può avere un tipo di post visualizzato in un modo, mentre un altro tipo di post viene visualizzato in un modo completamente diverso. Tutto dal layout ai colori."
+
+#: includes/page-home.php:37
+msgid "Need Support?"
+msgstr "Serve Supporto?"
+
+#: includes/page-home.php:38
+msgid "Support for this plugin is provided through my dedicated support forum. The forum is for legal purchasers of Easy Content Types. If you have obtained the plugin elsewhere (except through a valid contest or give away), please do us all a favor a refrain from asking questions on the support forum."
+msgstr "Il supporto per questo plugin viene fornito attraverso il mio forum di supporto dedicato. Il forum è per gli acquirenti legali di Easy Content Types. Se avete ottenuto il plugin altrove (se non attraverso un concorso valido o regalare), ti preghiamo di farci un favore a tutti e si astengano dal fare domande sul forum di supporto."
+
+#: includes/page-home.php:39
+msgid "The support forum can be found here:"
+msgstr "Il forum di supporto può essere trovato qui:"
+
+#: includes/post-types-admin.php:12
+msgid "Post type added. You should update your <a href=\"options-permalink.php\">permalinks</a> now"
+msgstr "Post Type aggiunto. Si consiglia di aggiornare il <a href=\"options-permalink.php\"> permalink </ a> ora"
+
+#: includes/post-types-admin.php:23
+msgid "Create New Custom Post Type"
+msgstr "Crea nuovo Custom Post Type"
+
+#: includes/post-types-admin.php:26
+msgid "Post Type General"
+msgstr "Post Type Generale"
+
+#: includes/post-types-admin.php:28
+msgid "Post Type Name"
+msgstr "Nome Post Type"
+
+#: includes/post-types-admin.php:30
+msgid "This is the name that you will use to query the custom post type."
+msgstr "Questo è il nome che verrà utilizzato per eseguire query sul post type personalizzato."
+
+#: includes/post-types-admin.php:30
+msgid "Note"
+msgstr "Nota"
+
+#: includes/post-types-admin.php:30
+msgid "names should be no longer than 10 letters<a href=\"#\" class=\"ecpt-help\"><span class=\"tooltip center midnightblue\">This is the name referenced by the database, if you don't know what that means, don't worry about it. Spaces and capitalization will be removed"
+msgstr "I nomi dovrebbero essere non più di 10 lettere <a href=\"#\" class=\"ecpt-help\"> <span class=\"tooltip centro midnightblue\"> Questo è il nome fa riferimento il database, se si non so che cosa significa, non ti preoccupare. Spazi e capitalizzazione saranno rimossi"
+
+#: includes/post-types-admin.php:34
+#: includes/post-types-list.php:6
+#: includes/post-types-list.php:17
+msgid "Labels"
+msgstr "Etichetta"
+
+#: includes/post-types-admin.php:36
+msgid "Singular Label"
+msgstr "Etichetta singolare"
+
+#: includes/post-types-admin.php:38
+msgid "The label used for single post type items, such as \"Book\""
+msgstr "L'etichetta utilizzata per i singole post type, come \"libro\""
+
+#: includes/post-types-admin.php:38
+#: includes/post-types-admin.php:42
+msgid "If you leave this blank, the name field above will be used"
+msgstr "Se si lascia questo vuoto, il campo del nome sopra verrà utilizzato"
+
+#: includes/post-types-admin.php:40
+msgid "Plural Label"
+msgstr "Etichetta Plurale"
+
+#: includes/post-types-admin.php:42
+msgid "The label used for plural post type items, such as \"Books\""
+msgstr "L'etichetta utilizzata per gli elementi di post type plurali, come \"Libri \""
+
+#: includes/post-types-admin.php:49
+msgid "Hierarchical"
+msgstr "Gerarchico"
+
+#: includes/post-types-admin.php:51
+msgid "Enabling this means that items can have parents and child items"
+msgstr "L'attivazione di questo significa che le voci possono avere gli elementi  genitori e gli elementi secondario"
+
+#: includes/post-types-admin.php:51
+msgid "Hierarchical post types work the same way that the regular Pages work."
+msgstr "I Post Type gerarchici funzionano allo stesso modo che le pagine normali funziona."
+
+#: includes/post-types-admin.php:53
+msgid "Enable Archives?"
+msgstr "Abilita Archivi?"
+
+#: includes/post-types-admin.php:55
+msgid "This will enable archives, such as monthly and yearly, for this post type"
+msgstr "Questo permetterà gli archivi, tipo post mensili e annuali, per questo post type"
+
+#: includes/post-types-admin.php:55
+msgid "Enabling this option will create archives for your post type, so that you can display a list of all items filed under a particular month or taxonomy"
+msgstr "L'attivazione di questa opzione creerà gli archivi per i post type, in modo da poter visualizzare un elenco di tutti gli elementi classificato in un determinato mese o tassonomia"
+
+#: includes/post-types-admin.php:57
+msgid "Post Formats?"
+msgstr "Formatti Post?"
+
+#: includes/post-types-admin.php:59
+msgid "This will enable post formats, gallery, aside, default"
+msgstr "Questo permetterà post type, gallerie, da parte, di default"
+
+#: includes/post-types-admin.php:59
+msgid "This will allow the new 3.1 feature for post formats to be used for this post type"
+msgstr "Questo permetterà la nuova funzionalità 3,1 per formati posti da utilizzare per questo post type."
+
+#: includes/post-types-admin.php:61
+msgid "Exclude from Search?"
+msgstr "Escludi dalla ricerca?"
+
+#: includes/post-types-admin.php:63
+msgid "Checking this option will prevent this post type from showing up in search results"
+msgstr "Selezionando questa opzione consente di evitare questo post type da mostrare nei risultati di ricerca"
+
+#: includes/post-types-admin.php:63
+msgid "If you don't want this post type to be searchable, enable this option"
+msgstr "Se non si desidera che questo post type per essere ricercabile, attivare questa opzione"
+
+#: includes/post-types-admin.php:65
+msgid "Show in Nav Menus?"
+msgstr "Mostra nel menu?"
+
+#: includes/post-types-admin.php:67
+msgid "Checking this will cause this post type to show up in the custom nav menu interface"
+msgstr "Selezionando questa casella si causare questo post type di mostrare nell'interfaccia di menu nav personalizzato"
+
+#: includes/post-types-admin.php:67
+msgid "This will allow you to add items from this post type to custom navigation menus"
+msgstr "Questo vi permetterà di aggiungere elementi da questo post type al menu di navigazione  personalizzate"
+
+#: includes/post-types-admin.php:69
+#: includes/post-types-edit.php:183
+#: includes/post-types-list.php:9
+#: includes/post-types-list.php:20
+msgid "Menu Icon"
+msgstr "Icona Menu"
+
+#: includes/post-types-admin.php:72
+msgid "Enter the URL to your menu icon, or click Choose Image to upload an icon. Optimal size: 16x16 px"
+msgstr "Inserisci l'URL al icona del menu, oppure fare clic su Seleziona immagine per caricare un'icona. Dimensioni ottimali: 16x16 px"
+
+#: includes/post-types-admin.php:72
+msgid "This is the icon that appears to the left of the post type name in the left navigation menu"
+msgstr "Questa e l'icona che appare a sinistra del nome del psto type nel menu di navigazione a sinistra"
+
+#: includes/post-types-admin.php:78
+msgid "Post Type Supports"
+msgstr "I Post Type Supporta"
+
+#: includes/post-types-admin.php:80
+msgid "Title"
+msgstr "Titolo"
+
+#: includes/post-types-admin.php:82
+msgid "Enable titles for this post type?"
+msgstr "Abilitare i titoli per questo post type?"
+
+#: includes/post-types-admin.php:82
+msgid "This will enabled the title field for the post type"
+msgstr "Questo si attivata il campo del titolo per il Post Type"
+
+#: includes/post-types-admin.php:84
+msgid "Editor"
+msgstr "Editore"
+
+#: includes/post-types-admin.php:86
+msgid "Enable the main content editor for this post type?"
+msgstr "Attivare  l'editor del contenuto principale per questo post type?"
+
+#: includes/post-types-admin.php:86
+msgid "This will enable the main content editor, including upload media and formating buttons"
+msgstr "Questo si abilita  l'editor del contenuto principale, compresi i supporti di upload media e le pulsanti di formattazione"
+
+#: includes/post-types-admin.php:88
+msgid "Author"
+msgstr "Autore"
+
+#: includes/post-types-admin.php:90
+msgid "Enable author selection for this post type?"
+msgstr "Abilita selezione autore per questo post type?"
+
+#: includes/post-types-admin.php:90
+msgid "This will enable the drop down author selection"
+msgstr "Questo permetterà menu a discesa di selezione autore"
+
+#: includes/post-types-admin.php:92
+msgid "Thumbnail"
+msgstr "Anteprima"
+
+#: includes/post-types-admin.php:94
+msgid "Enable the featured post image for this post type?"
+msgstr "Abilita Immagine in evidenza per questo post type?"
+
+#: includes/post-types-admin.php:94
+msgid "This will enable the featured post thumbnail option"
+msgstr "Ciò consentirà alla funzionalità opzione anteprima del post"
+
+#: includes/post-types-admin.php:96
+msgid "Excerpt"
+msgstr "Estratto"
+
+#: includes/post-types-admin.php:98
+msgid "Enable the custom crafted excerpt for this post type?"
+msgstr "Abilitare il estratto personalizzato predisposto per questo post type?"
+
+#: includes/post-types-admin.php:98
+msgid "This will enable the hand crafted excerpt box that can be used in place of the auto-generated excerpt"
+msgstr "Ciò permetterà alla finestra riasunto che può essere utilizzata al posto della riasunto automaticamente generato"
+
+#: includes/post-types-admin.php:100
+msgid "Custom Fields"
+msgstr "Campi Personalizzati"
+
+#: includes/post-types-admin.php:102
+msgid "Enable custom fields for this post type?"
+msgstr "Abilita campi personalizzati per questo Post type?"
+
+#: includes/post-types-admin.php:102
+msgid "This will enable the custom fields for this post type"
+msgstr "Ciò permetterà agli campi personalizzati per questo post type"
+
+#: includes/post-types-admin.php:104
+msgid "Comments"
+msgstr "Commenti"
+
+#: includes/post-types-admin.php:106
+msgid "Enable comments for this post type?"
+msgstr "Abilita i commenti per questo Post Type?"
+
+#: includes/post-types-admin.php:106
+msgid "This will enable the option to turn on or off comments for this post type"
+msgstr "Questo permetterà l'opzione per attivare o disattivare i commenti per questo post type"
+
+#: includes/post-types-admin.php:108
+msgid "Revisions"
+msgstr "Revisioni"
+
+#: includes/post-types-admin.php:110
+msgid "Enable revisions for this post type?"
+msgstr "Abilita revisioni per questo Post Type?"
+
+#: includes/post-types-admin.php:110
+msgid "This will enable automatic revision control, allowing you to revert back to previous item versions"
+msgstr "Questo permetterà il controllo automatico di revisione, che consente di ripristinare le versioni precedenti"
+
+#: includes/post-types-admin.php:112
+msgid "Post Tags"
+msgstr "Post Tag"
+
+#: includes/post-types-admin.php:114
+msgid "Enable post tags for this post type?"
+msgstr "Abilitare i tag post per questo tipo di post?"
+
+#: includes/post-types-admin.php:114
+msgid "This will enable the default post tags taxonomy for this post type"
+msgstr "Questo permetterà il post tassonomia default dei tag per questo post type"
+
+#: includes/post-types-admin.php:116
+msgid "Categories"
+msgstr "Categorie"
+
+#: includes/post-types-admin.php:118
+msgid "Enable categories?"
+msgstr "Abilita categorie?"
+
+#: includes/post-types-admin.php:118
+msgid "This will enable the default categories taxonomy for this post type"
+msgstr "Ciò consentirà alla tassonomia predefinita categorie per questo post type"
+
+#: includes/post-types-admin.php:123
+msgid "Advanced"
+msgstr "Avanzato"
+
+#: includes/post-types-admin.php:125
+#: includes/post-types-edit.php:62
+msgid "Menu Position"
+msgstr "Posizione Menu"
+
+#: includes/post-types-admin.php:128
+msgid "Enter the menu position for the post type. Click the help icon for a list of options"
+msgstr "Inserire la posizione del menu per il tipo di post. Fare clic sull'icona aiuto per una lista di opzioni"
+
+#: includes/post-types-admin.php:130
+msgid "below Posts"
+msgstr "sotto Post"
+
+#: includes/post-types-admin.php:131
+msgid "below Media"
+msgstr "sotto Media"
+
+#: includes/post-types-admin.php:132
+msgid "below Links"
+msgstr "sotto Links"
+
+#: includes/post-types-admin.php:133
+msgid "below Pages"
+msgstr "sotto Pagine"
+
+#: includes/post-types-admin.php:134
+msgid "below Comments"
+msgstr "sotto Commenti"
+
+#: includes/post-types-admin.php:135
+msgid "below first separator"
+msgstr "sotto Primo Separatore"
+
+#: includes/post-types-admin.php:136
+msgid "below Plugins"
+msgstr "sotto Plugins"
+
+#: includes/post-types-admin.php:137
+msgid "below Users"
+msgstr "Sotto Utente"
+
+#: includes/post-types-admin.php:138
+msgid "below Tools"
+msgstr "sotto strumenti"
+
+#: includes/post-types-admin.php:139
+msgid "below Settings"
+msgstr "sotto Opzioni"
+
+#: includes/post-types-admin.php:140
+msgid "below second separator"
+msgstr "sotto secondo separatore"
+
+#: includes/post-types-admin.php:144
+msgid "Post Type Slug"
+msgstr "Post Type Slug"
+
+#: includes/post-types-admin.php:147
+msgid "Enter the URL friendly slug to use for your post type. Only use this if you know what you're doing"
+msgstr "Inserisci il slug amichevole URL da utilizzare per il tipo di post. Utilizzare solo se si sa cosa si sta facendo"
+
+#: includes/post-types-admin.php:148
+msgid "The slug is the URL friendly name of your post type. It will be displayed in the URL when viewing a post type entry or archive. Only advanced users should enter anything here"
+msgstr "Il slug è il nome amichevole URL del vostro post type. Verrà visualizzato nella URL quando si visualizza un post type voce o di archiviazione. Solo gli utenti avanzati dovrebbero immettere qualcosa qui"
+
+#: includes/post-types-admin.php:151
+msgid "Disable with_front?"
+msgstr "Disabilitare with_front?"
+
+#: includes/post-types-admin.php:153
+msgid "Checking this box means that post type slugs will not be prepended with the front base"
+msgstr "Selezionando questa casella significa che le slug del post type non saranno preffisati con la base anteriore"
+
+#: includes/post-types-admin.php:153
+msgid "If your permalink structure is /blog/, then your links will be: /blog/{post-type-name}/ if you leave this unchecked<br/>Otherwise your your permalinks will be /{post-type-name}/"
+msgstr "Se la struttura dei permalink è /blog/, quindi i link saranno: / blog /{post-type-nome}/ se si lascia questa opzione deselezionata <br/> altrimenti i vostri i vostri permalink sarà /{post-type-nome}/"
+
+#: includes/post-types-admin.php:158
+msgid "Add Post Type"
+msgstr "Aggiungi Post Type"
+
+#: includes/post-types-edit.php:3
+msgid "Edit Post Type"
+msgstr "Modifica Post Type"
+
+#: includes/post-types-edit.php:8
+msgid "Post type updated. If you changed the slug or name, you should update <a href=\"options-permalink.php\">permalinks</a> now"
+msgstr "Post Type aggiornato. Se avete cambiato il slug o il nome, è necessario aggiornare <a href=\"options-permalink.php\"> permalink </ a> ora"
+
+#: includes/post-types-edit.php:29
+msgid "This is the name that will be used to query the post type from the database. Keep it a single word and simple."
+msgstr "Questo è il nome che verrà utilizzato per eseguire query sul post type dal database. usare sola una parola semplice."
+
+#: includes/post-types-edit.php:34
+#: includes/post-types-list.php:69
+msgid "Single"
+msgstr "Singolo"
+
+#: includes/post-types-edit.php:38
+msgid "The single label is used to refer to single post type items, such as \"Add New Book\"."
+msgstr "L'etichetta singolo viene usato per riferirsi a singole voci di post type, come \"Aggiungi nuovo libro\"."
+
+#: includes/post-types-edit.php:44
+msgid "Plural"
+msgstr "Plurale"
+
+#: includes/post-types-edit.php:48
+msgid "The plural label is used to refer to plural post type items, such as \"Search Books\"."
+msgstr "L'etichetta plurale è usato per riferirsi a elementi di post type plurali, come \"Ricerca Libri\"."
+
+#: includes/post-types-edit.php:53
+#: includes/post-types-list.php:7
+#: includes/post-types-list.php:18
+msgid "Slug"
+msgstr "Slug"
+
+#: includes/post-types-edit.php:57
+msgid "The slug is the url friendly name of the post type."
+msgstr "Lo Slug e il url amichevole nome del post type"
+
+#: includes/post-types-edit.php:66
+msgid "The position of the post type in the menu. For help: "
+msgstr "La posizione del post type nel menu. Per aiuto:"
+
+#: includes/post-types-edit.php:66
+msgid "documentation"
+msgstr "documentazione"
+
+#: includes/post-types-edit.php:71
+#: includes/post-types-list.php:8
+#: includes/post-types-list.php:19
+msgid "Attributes"
+msgstr "Attributi"
+
+#: includes/post-types-edit.php:192
+msgid "Choose Image"
+msgstr "Selezionare Immagine"
+
+#: includes/post-types-list.php:1
+msgid "Easy Custom Post Types"
+msgstr "Semplice Custom Post Types"
+
+#: includes/post-types-list.php:10
+#: includes/post-types-list.php:21
+msgid "Template File"
+msgstr "Template File"
+
+#: includes/post-types-list.php:67
+msgid "Archives"
+msgstr "Archivi"
+
+#: includes/post-types-list.php:73
+msgid "View"
+msgstr "Visualizza"
+
+#: includes/post-types-list.php:74
+msgid "Add New"
+msgstr "Aggiungi Nuovo"
+
+#: includes/settings.php:11
+msgid "Easy Custom Content Types Settings"
+msgstr "Easy Custom Content Types Settings"
+
+#: includes/settings.php:17
+msgid "Options saved"
+msgstr "Opzioni Salvati"
+
+#: includes/settings.php:24
+msgid "Template folder is not writable! Please change permissions on your theme's root folder to 755 or 777 in order to enable these template settings"
+msgstr "Template cartella non è scrivibile! Si prega di modificare le autorizzazioni sulla cartella principale del tema a 755 o 777 al fine di consentire le impostazioni del template"
+
+#: includes/settings.php:27
+msgid "Post Type Templates"
+msgstr "Template Post Type"
+
+#: includes/settings.php:31
+msgid "Check this box to enable automatic single template creation for custom post types"
+msgstr "Seleziona questa casella per attivare la creazione automatica dello template singolo  per i post type personalizzati"
+
+#: includes/settings.php:35
+msgid "Check this box to enable automatic template creation for custom post types archives"
+msgstr "Seleziona questa casella per attivare la creazione automatica di template per i post type personalizzate archivi"
+
+#: includes/settings.php:38
+msgid "Taxonomy Templates"
+msgstr "Template Taxonomy"
+
+#: includes/settings.php:42
+msgid "Check this box to enable automatic template creation for custom taxonomy archives"
+msgstr "Seleziona questa casella per attivare la creazione automatica di template per i tassonomie personalizzate"
+
+#: includes/settings.php:45
+msgid "User Levels"
+msgstr "Livello Utente"
+
+#: includes/settings.php:52
+msgid "Choose the user level that can access the custom content menu"
+msgstr "Scegliere il livello di utente che può accedere al menu  dei contenuti personalizzato"
+
+#: includes/settings.php:60
+msgid "Choose the user level that can create custom post types."
+msgstr "Scegliere il livello di utente che può creare i post type personalizzati."
+
+#: includes/settings.php:68
+msgid "Choose the user level that can create custom taxonomies."
+msgstr "Scegliere il livello di utente che può creare i tassonomie personalizzati."
+
+#: includes/settings.php:76
+msgid "Choose the user level that can create custom meta boxes."
+msgstr "Scegliere il livello di utente che può creare i meta box personalizzati."
+
+#: includes/settings.php:79
+msgid "Render Short Codes in Meta Fields"
+msgstr "Render Short code nei campi Meta"
+
+#: includes/settings.php:83
+msgid "Check this box to render short codes that are placed in meta box fields. Note, this can occasionally cause conflicts, though very rarely <a href=\"#shopp-conflict\">*</a>"
+msgstr "Seleziona questa casella per eseguire il rendering del short code che vengono inseriti nei campi casella di meta. Nota bene, questo può a volte causare conflitti, anche se molto raramente <a href=\"#shopp-conflict\"> * </ a>"
+
+#: includes/settings.php:86
+msgid "Disable Taxonomy Archives Fix"
+msgstr "Disabilitare Correzione Archivi per Tassonomia "
+
+#: includes/settings.php:90
+msgid "Check this box to disable the automatic filter applied to taxonomy archives. This fixes the problem with 404s in taxonomy archives, but it's possible it could cause problems with some themes."
+msgstr "Seleziona questa casella per disattivare il filtro automatico applicato agli archivi tassonomia. Questo risolve il problema con 404s negli archivi tassonomia, ma è possibile che potrebbe causare problemi con alcuni temi."
+
+#: includes/settings.php:93
+msgid "Date Picker Format"
+msgstr "Formato di Data Selettore "
+
+#: includes/settings.php:97
+msgid "Enter the date format you would like used for the date picker, or leave blank for default. This format is only shown in the meta field output. Use <a href=\"http://codex.wordpress.org/Formatting_Date_and_Time\">this page for reference.</a>"
+msgstr "Inserire il formato della data che si desidera utilizzare per il selettore data, o lasciare in bianco per default. Questo formato viene visualizzata solo nel campo di emissione meta. Utilizzare <a href=\"http://codex.wordpress.org/Formatting_Date_and_Time\">questa pagina per riferimento. </ a>"
+
+#: includes/settings.php:100
+msgid "Auto Display Meta Field Values"
+msgstr "Visualizza Automatico i valcori Meta field"
+
+#: includes/settings.php:107
+msgid "Check this box to automatically display meta box field values after the item content for the "
+msgstr "Seleziona questa casella per visualizzare automaticamente i campi dei metabox dopo che il contenuto elemento per il"
+
+#: includes/settings.php:107
+msgid "post type"
+msgstr "post type"
+
+#: includes/settings.php:112
+msgid "Check this box to show field descriptions"
+msgstr "Seleziona questa casella per mostrare le descrizioni dei campi"
+
+#: includes/settings.php:118
+msgid "Check this box to automatically display text fields"
+msgstr "Seleziona questa casella per visualizzare automaticamente i campi di testo"
+
+#: includes/settings.php:124
+msgid "Check this box to automatically display textarea fields"
+msgstr "Seleziona questa casella per visualizzare automaticamente i campi textarea"
+
+#: includes/settings.php:130
+msgid "Check this box to automatically display date fields"
+msgstr "Spunta questa casella per visualizzare automaticamente i campi data"
+
+#: includes/settings.php:136
+msgid "Check this box to automatically display slider fields"
+msgstr "Spunta questa casella per per visualizzare automaticamente i campi di scorrimento"
+
+#: includes/settings.php:142
+msgid "Check this box to automatically display the selected option for select fields"
+msgstr "Spunta questa casella per visualizzare automaticamente l'opzione per molteplici campi selezionati"
+
+#: includes/settings.php:148
+msgid "Check this box to automatically display the selected option for radio fields"
+msgstr "Spunta questa casella per visualizzare automaticamente l'opzione selezionata per campi radio"
+
+#: includes/settings.php:154
+msgid "Check this box to automatically display \"yes\" or \"no\" for checkbox fields"
+msgstr "Spunta questa casella per visualizzare automaticamente  \"sì \" o  \"no \" per i campi casella"
+
+#: includes/settings.php:160
+msgid "Check this box to automatically display repeatable field values"
+msgstr "Spunta questa casella  per visualizzare automaticamente i valori dei campi ripetibili"
+
+#: includes/settings.php:167
+msgid "Check this box to automatically display upload fields"
+msgstr "Spunta questa casella per visualizzare automaticamente i campi di upload"
+
+#: includes/settings.php:172
+msgid "Check this box if you want to render images, rather than just displaying the url"
+msgstr "Spunta questa casella se si desidera eseguire il rendering delle immagini, piuttosto che visualizzare l'url"
+
+#: includes/settings.php:179
+msgid "Check this box to automatically display repeatable upload fields"
+msgstr "Spunta questa casella per visualizzare automaticamente i campi di upload ripetibili"
+
+#: includes/settings.php:184
+msgid "Check this box if you want to render images, rather than just displaying the urls"
+msgstr "Spunta questa casella se si desidera eseguire il rendering delle immagini, piuttosto che visualizzare l'url"
+
+#: includes/settings.php:193
+msgid "If you want more control over how meta field values are displayed, use the <a href=\"http://localhost/wordpress/wp-admin/admin.php?page=easy-content-types-help#field-info\">ecpt_display_meta()</a> function in your template files, or one of the other methods described in the documentation."
+msgstr "Se si desidera un maggiore controllo sul modo in cui i valori di campo meta vengono visualizzati, utilizzare il <a href=\"http://localhost/wordpress/wp-admin/admin.php?page=easy-content-types-help#field-info\">ecpt_display_meta()</a> funzione nei file di template, o uno degli altri metodi descritti nella documentazione."
+
+#: includes/settings.php:195
+msgid "Only one conflict has been found with this option. If you are using the Shopp Ecommerce plugin, then you should disable this option."
+msgstr "Solo un conflitto è stato trovato con questa opzione. Se si utilizza il plugin Shopp Ecommerce, allora è necessario disattivare questa opzione."
+
+#: includes/settings.php:198
+msgid "Save Options"
+msgstr "Salva le opzioni"
+
+#: includes/taxonomies-admin.php:31
+msgid "Create New Custom Taxonomy"
+msgstr "Creare nuovo Custom Taxonomy"
+
+#: includes/taxonomies-admin.php:34
+msgid "Taxonomy General"
+msgstr "Taxonomy Generale"
+
+#: includes/taxonomies-admin.php:36
+msgid "Taxonomy Name"
+msgstr "Nome Taxonomy"
+
+#: includes/taxonomies-admin.php:38
+msgid "This is the main name of the taxonomy"
+msgstr "Questo e il nome principale del Taxonomy"
+
+#: includes/taxonomies-admin.php:38
+msgid "This is the name referenced by the database, if you don't know what that means, don't worry about it. Just enter a name that makes sense to you"
+msgstr "Questo è il nome a cui fa riferimento il database, se non sai cosa significa, non ti preoccupare. Basta inserire un nome, che ha senso per te"
+
+#: includes/taxonomies-admin.php:40
+msgid "Object"
+msgstr "Oggetto"
+
+#: includes/taxonomies-admin.php:49
+msgid "This is the post type that will use this taxonomy."
+msgstr "Questo è il post type che utilizzerà questa tassonomia."
+
+#: includes/taxonomies-admin.php:49
+msgid "You may give this taxonomy to more than one post type by holding the Contral (Command on a Mac) and selecting more than one"
+msgstr "Si può dare questa tassonomia a più di un tipo di post tenendo premuto il tasto control (Command su Mac) e selezionando più di una voce"
+
+#: includes/taxonomies-admin.php:56
+msgid "The label used for single taxonomy items, such as \"Genre\""
+msgstr "L'etichetta utilizzata per gli elementi tassonomia singoli, come \"genere\""
+
+#: includes/taxonomies-admin.php:56
+msgid "This is the name that will be used to refer to single items of this taxonomy. If you leave this blank, the name field above will be used"
+msgstr "Questo è il nome che verrà utilizzato per riferirsi a singole voci di questa tassonomia. Se si lascia questo vuoto, il campo del nome sopra verrà utilizzato"
+
+#: includes/taxonomies-admin.php:60
+msgid "The label used for plural taxonomy items, such as \"Genres\""
+msgstr "L'etichetta utilizzata per il plurale dei taxonomy, tipo \"Generi\""
+
+#: includes/taxonomies-admin.php:60
+msgid "This is the name that will be used to refer to plural items. If you leave it blank, the name field above will be used"
+msgstr "Questo è il nome che verrà utilizzato per riferirsi a elementi plurali. Se si lascia vuoto il campo del nome sopra verrà utilizzato"
+
+#: includes/taxonomies-admin.php:67
+msgid "Hierarchical?"
+msgstr "Gerarchica?"
+
+#: includes/taxonomies-admin.php:69
+msgid "Enabling this means that items can have parent and child items"
+msgstr "L'attivazione di questo significa che gli elementi possono avere elementi genitore e figlio"
+
+#: includes/taxonomies-admin.php:69
+msgid "This means that you will be able to create tiers with this taxonomy, just like the default post categories. Great for catalogs"
+msgstr "Questo significa che sarete in grado di creare livelli con questa tassonomia, proprio come le categorie dei post default. Ottimo per i cataloghi"
+
+#: includes/taxonomies-admin.php:71
+msgid "Show Tag Cloud?"
+msgstr "Mostra Tag Cloud?"
+
+#: includes/taxonomies-admin.php:73
+msgid "Enabling this means that this taxonomy can be displayed as a tag cloud"
+msgstr "L'attivazione di questo significa che questa taxonomy può essere visualizzato come una tag cloud"
+
+#: includes/taxonomies-admin.php:73
+msgid "This will allow the terms within this taxonomy to be displayed as a tag cloud, allowing your visitors to view posts by taxonomy term, and also which terms are the most popular. Just like post tags."
+msgstr "In questo modo i termini all'interno di questa tassonomia per essere visualizzati come una tag cloud, consentendo ai visitatori di visualizzare i post di termine tassonomia, e anche quali termini sono più popolari. Proprio come i tag post."
+
+#: includes/taxonomies-admin.php:78
+msgid "Checking this will cause this taxonomy to show up in the custom nav menu interface"
+msgstr "Selezionando questa casella per mostrare  questa tassonomia nell'interfaccia menu personalizzato nav"
+
+#: includes/taxonomies-admin.php:78
+msgid "This will allow you to add individual taxonomies and taxonomy terms to the WP nav menus"
+msgstr "Questo vi permetterà di aggiungere singole tassonomie e termini taxonomy ai i WP menu nav"
+
+#: includes/taxonomies-admin.php:82
+msgid "The URL friendly \"nice name\" of your taxonomy"
+msgstr "L'URL amichevole \"bel nome\" del vostro taxonomy"
+
+#: includes/taxonomies-admin.php:82
+msgid "The slug will be displayed in the URL when accessing your taxonomy archives. Example, if you give your Genres taxonomy a slug of \"song-types\", your archive URL will be http://yoursite.com/song-types, or similar depending on your permalink structure.<br/> The slug is useful when you have a taxonomy and post type (or regular page) that are named the same thing."
+msgstr "Lo slug viene visualizzato nell'URL quando accedono i vostri archivi taxonomy. Ad esempio, se si dà il taxonomy Generi un slug di \"canzoni-typo \", l'URL di archivio sarà http://yoursite.com/song-types, o simili a seconda della struttura dei permalink. <br/> Lo slug è utile quando si dispone di una taxonomy e il tipo di post (o pagina regolare) che prendono il nome la stessa cosa."
+
+#: includes/taxonomies-admin.php:82
+msgid "This is an advanced option and should be left blank by most"
+msgstr "Questa è un'opzione avanzata e dovrebbe essere lasciato vuoto dalla maggior parte di utenti"
+
+#: includes/taxonomies-admin.php:86
+msgid "Checking this box means that taxonomy slugs will not be prepended with the front base"
+msgstr "Selezionando questa casella significa che le slug di tassonomia non essere preposto alla base anteriore"
+
+#: includes/taxonomies-admin.php:86
+msgid "If your permalink structure is /blog/, then your links will be: /blog/{tax-name}/ if you leave this unchecked<br/>Otherwise your your permalinks will be /{tax-name}/"
+msgstr "Se la struttura dei permalink è /blog/, quindi i collegamenti saranno: /blog/{nome-taxonomy}/ se si lascia questa opzione deselezionata <br/> altrimenti i vostri  permalink sarà /{nome-taxomony}/"
+
+#: includes/taxonomies-admin.php:89
+msgid "Enable Filter"
+msgstr "Abilita Filtro"
+
+#: includes/taxonomies-admin.php:91
+msgid "Check this to add a drop down of taxonomy terms to the post type list page"
+msgstr "Selezionare questa opzione per aggiungere una discesa dei termini tassonomia alla pagina dell'elenco post type"
+
+#: includes/taxonomies-admin.php:91
+msgid "This will allow you to filter the entries shown to only those that are filed in the selected taxonomy term"
+msgstr "Questo vi permetterà di filtrare le voci mostrate solo quelli che sono archiviati nel termine tassonomia selezionato"
+
+#: includes/taxonomies-admin.php:95
+msgid "Add Taxonomy"
+msgstr "Aggiungere un Taxonomy"
+
+#: includes/taxonomy-edit.php:2
+msgid "Edit Taxonomy "
+msgstr "Modifica Taxonomy"
+
+#: includes/taxonomy-edit.php:5
+msgid "Taxonomy updated. If you changed the slug or name, you should update <a href=\"options-permalink.php\">permalinks</a> now"
+msgstr "Tassonomia aggiornato. Se avete cambiato il slug o il nome, è necessario aggiornare <a href=\"options-permalink.php\"> permalink </ a> ora"
+
+#: includes/taxonomy-edit.php:23
+msgid "The name is the variable used to query the taxonomy from the database."
+msgstr "Il nome è la variabile utilizzata per eseguire query sul tassonomia dal database."
+
+#: includes/taxonomy-edit.php:28
+msgid "Single Label"
+msgstr "Etichetta Singolo"
+
+#: includes/taxonomy-edit.php:32
+msgid "The single label is used to refer to single taxonomy items, such as \"View Genre\"."
+msgstr "La singola etichetta è usato per riferirsi a elementi tassonomia singoli, come \"Visualizza Genere \"."
+
+#: includes/taxonomy-edit.php:41
+msgid "The plural name is used to refer to plural taxonomy items, such as \"Search Genres\"."
+msgstr "Il nome plurale è utilizzato per fare riferimento a elementi tassonomia plurali, come \"Generi di ricerca \"."
+
+#: includes/taxonomy-edit.php:46
+#: includes/taxonomy-list.php:7
+#: includes/taxonomy-list.php:18
+msgid "Object(s)"
+msgstr "Oggetto(i)"
+
+#: includes/taxonomy-edit.php:59
+msgid "The object is the post type that the taxonomy will be applied to. For example, if you choose \"post\", then this taxonomy will be available to the regular post object."
+msgstr "L'oggetto è il  post type che la tassonomia verrà applicato. Ad esempio, se si sceglie \"post \", allora questa tassonomia sarà disponibile per l'oggetto post normale."
+
+#: includes/taxonomy-edit.php:68
+msgid "The slug is the name you will use in the URL to display your taxonomy archive."
+msgstr "Il slug è il nome verrà utilizzato nell'URL per visualizzare l'archivio tassonomia."
+
+#: includes/taxonomy-list.php:1
+msgid "Easy Custom Taxonomies"
+msgstr "Easy Custom Taxonomies"
+
+#: includes/taxonomy-list.php:71
+msgid "Specific Term"
+msgstr "Parola Specifico"
+
+#: includes/taxonomy-list.php:72
+msgid "Archive"
+msgstr "Archivio"
+
+#: includes/taxonomy-list.php:75
+msgid "edit"
+msgstr "modifica"
+
+#: includes/taxonomy-list.php:76
+msgid "view"
+msgstr "visualizzare"
+
