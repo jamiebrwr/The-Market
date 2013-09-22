@@ -285,3 +285,19 @@ function wpse_74054_add_author_woocommerce() {
 
 // Display 24 products per page. Goes in functions.php
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 15;' ), 20 );
+
+
+
+function contributors() {
+global $wpdb;
+
+$authors = $wpdb->get_results("SELECT ID, user_nicename from $wpdb->users ORDER BY display_name");
+echo '<ul>';
+foreach($authors as $author) {
+		echo '<li>';
+			echo '<a href="'.get_bloginfo('url').'/?author='.$author->ID.'">'.get_avatar($author->ID).'</a>';
+			echo '<a href="'.get_bloginfo('url').'/?author='.$author->ID.'">'.get_the_author_meta('display_name', $author->ID).'</a>';
+		echo '</li>';
+	}
+echo '</ul>';
+}
