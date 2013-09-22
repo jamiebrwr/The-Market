@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		   
 		   
 		   <header style="text-align:center;">
-			<a class="button large" style="padding: 1em 6.2em;margin-bottom:3em;" href="/The-Market/post-new-item/">Post Now</a>
+			<a class="button large" style="padding:1em 6.2em;" href="/The-Market/post-new-item/">Post Now</a>
 		</header>
 		   
 		   
@@ -32,12 +32,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		
 
 			
-		    <header style="text-align:center;margin-bottom:3em;">
+		<header style="text-align:center;margin-bottom:3em;">
 			<h1>Get Started Today</h1>
 			<p>Trade what you don't want for something you do want.</p>
-			<?php $register_link = wp_register( '', '', false);
-			echo '<a class="button large" style="padding: 1em 5.2em;"'.$register_link.'</a>';
-			?>
+			<a class="button large" style="padding:1em 6.2em;" href="http://www.example.com/wp-login.php?action=register">Register</a>
 		</header>
 		<?php }
 		?>
