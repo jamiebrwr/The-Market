@@ -272,5 +272,13 @@ function remove_admin_bar() {
 	}
 }
 
+/*
+Woocommerce: assign an “author” to a product
+@link	http://wordpress.stackexchange.com/questions/74054/woocommerce-assign-an-author-to-a-product
+*/
+add_action('init', 'wpse_74054_add_author_woocommerce', 999 );
 
+function wpse_74054_add_author_woocommerce() {
+    add_post_type_support( 'product', 'author' );
+}
 
