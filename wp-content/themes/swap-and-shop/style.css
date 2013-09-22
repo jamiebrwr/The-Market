@@ -1,0 +1,401 @@
+/*
+Theme Name: St. Joe Swap-and-Shop
+Description: Child theme for Hustle
+Author: Jamie Brewer
+Author URI: http://brewerjwebdesign.com
+Version: 1.0
+Template: hustle
+*/
+
+@import url("../hustle/style.css");
+
+/*-----------------------------------------------------------------------------------*/
+/* Defaults */
+/*-----------------------------------------------------------------------------------*/
+/* Helper Classes */
+.fix {
+	clear:both;
+}
+hr {
+	margin: 1.618em 0 1.618em 0;
+	clear: both;
+}
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Images */
+img.alignleft {
+	margin: 5px 30px 5px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 10px 5px 0;
+}
+
+img.alignright {
+	margin: 5px 0 5px 20px;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 5px 10px;
+}
+
+img.aligncenter {
+	margin: 5px auto;
+}
+
+img.alignnone {
+	margin: 5px 0;
+}
+.image-holder {
+	margin-bottom: 2em;
+}
+a.post-delete-link {
+	display: inline-block;
+	padding: .382em 1.618em;
+	border: none;
+	color: white!important;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1em;
+	font-family: inherit;
+	cursor: pointer;
+	overflow: visible;
+	width: auto;
+	line-height: 1.618em;
+	background: #de1e1e;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 300px;
+	border-radius: 300px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+a.post-delete-link:hover {
+	background: #d11d1d;
+}
+
+#top ul.nav > li.current_page_item a, #top ul.nav > li.current_page_parent a, #top ul.nav > li.current-menu-ancestor a, #top ul.nav > li.current-cat a, #top ul.nav > li.li.current-menu-item a {
+	color: red !important;
+}
+/*-----------------------------------------------------------------------------------*/
+/* Header */
+/*-----------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* Homepage */
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* Content */
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* Posts */
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------*/
+/* Single Post - single.php */
+/*-------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* Archives */
+/*-------------------------------------------------------------------------------------------*/
+body.author .archive-header {
+	margin: 0 0 1.631em;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Authors */
+/*-------------------------------------------------------------------------------------------*/
+body.author #header {
+	margin: 0 auto 1.854em;
+}
+body.author #breadcrumbs {
+	display: none;
+}
+.author-avatar {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+.author-avatar img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 3.631em;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	box-shadow: 0 0 0 5px #e5e5e5;
+	-webkit-box-shadow: 0 0 0 5px #e5e5e5;
+}
+img.author-archive-post-thumb {
+	box-shadow: 0 0 0 5px #e5e5e5;
+	-webkit-box-shadow: 0 0 0 5px #e5e5e5;
+}
+/*-------------------------------------------------------------------------------------------*/
+/* Sidebar */
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* Footer */
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 404 - Not Registered */
+/*-------------------------------------------------------------------------------------------*/
+.register-notice {
+	text-align: center;
+	font-size: 2em;
+}
+.register-notice p span {
+	text-align: center;
+	font-size: 0.5em;
+	font-style: italic;
+}
+#main .register-notice header h1 {
+	margin-right: 0em;
+}
+/*-------------------------------------------------------------------------------------------*/
+/* Woocommerce */
+/*-------------------------------------------------------------------------------------------*/
+ul.products li.product:hover li.details,
+ul.products li.product:hover li.price,
+ul.products li.product:hover li.cart,
+form.cart {
+	display:none;
+}
+.entry-summary span.amount {
+	color:#00c809;
+}
+/*-------------------------------------------------------------------------------------------*/
+/* Plugins */
+/*-------------------------------------------------------------------------------------------*/
+input[type="text"], input.input-text, textarea, input.txt, input[type="tel"], input[type="email"], input[type="password"] {
+padding: .236em 7em;
+}
+input[type="password"] {
+-webkit-border-radius: 300px;
+border-radius: 300px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+border: 1px solid 
+#e5e5e5;
+font-size: 1em;
+line-height: 1.618em;
+font-family: inherit;
+outline: none;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.widget_pw_login_widget {
+	margin-bottom: 1em !important;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Media Queries */
+/*-------------------------------------------------------------------------------------------*/
+
+/*
+	-- LANDSCAPE --
+	iPad 3 Retnia Display
+	iPad 4 Retnia Display
+	
+	<link type="text/css" rel="stylesheet" media="only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2)" href="/wp-content/themes/THEME/iPad-Retnia-Display.css" />
+	
+	/*
+	-- PORTRAIT & LANDSCAPE --
+	iPad 3 Retnia Display
+	iPad 4 Retnia Display
+*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+	/*
+		-- PORTRAIT --
+		iPad 3 Retnia Display
+		iPad 4 Retnia Display
+	*/	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait)
+	and (-webkit-min-device-pixel-ratio: 2) {}
+	
+	
+	
+	/*
+		-- LANDSCAPE --
+		iPad 3 Retnia Display
+		iPad 4 Retnia Display
+	*/	
+	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape)
+	and (-webkit-min-device-pixel-ratio: 2) {}
+	
+	
+/*-------------------------------------------------------------------------------------------*/
+/* iPads */
+/*-------------------------------------------------------------------------------------------*/
+
+/*
+	-- PORTRAIT & LANDSCAPE --
+	iPad 1
+	iPad 2
+	iPad 2.5
+	iPad Mini
+*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {}
+
+	/*
+		-- LANDSCAPE --
+		iPad 1
+		iPad 2
+		iPad 2.5
+		iPad Mini
+	*/
+	@media only screen and (min-width:768px) and (max-width: 1024px) and (orientation: landscape) {}
+	
+	/*
+		-- PORTRAIT --
+		iPad 1
+		iPad 2
+		iPad 2.5
+		iPad Mini
+	*/
+	@media only screen and (min-width:768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {}
+	
+
+/*
+	-- PORTRAIT & LANDSCAPE --
+	iPad 1
+	iPad 2
+*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){}
+	
+	/*
+		-- PORTRAIT --
+		iPad 1
+		iPad 2
+	*/	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait) 
+	and (-webkit-min-device-pixel-ratio: 1) {}
+
+	/*
+		-- LANDSCAPE --
+		iPad 1
+		iPad 2
+	*/
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape)
+	and (-webkit-min-device-pixel-ratio: 1)  {}
+
+/*
+	Desktops, laptops and iPads (landscape)
+*/
+
+@media only screen and (max-width: 1024px)and (min-device-width : 768px) {}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* iPhones */
+/*-------------------------------------------------------------------------------------------*/
+
+/*----------------------------
+	-- PORTRAIT & LANDSCAPE --
+	iPhone 3g
+	iPhone 4
+	iPhne 4S
+----------------------------*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {}
+
+	/*
+		-- LANDSCAPE --
+		iPhone 3g
+		iPhone 4
+		iPhne 4S
+	*/
+	@media only screen and (min-width : 321px) and (max-width: 480px) and (orientation: landscape) {}
+	
+	/*
+		-- PORTRAIT --
+		iPhone 3g
+		iPhone 4
+		iPhne 4S
+		(portrait)
+	*/
+	@media only screen and (max-width: 480px) and (orientation: portrait) {} 
+
+
+
+
+/*----------------------------
+	-- PORTRAIT & LANDSCAPE --
+	iPhone 5
+----------------------------*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {}
+
+	/*
+		-- LANDSCAPE --
+		iPhone 5
+	*/
+	@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+	
+	/*
+		-- PORTRAIT --
+		iPhone 5
+	*/
+	@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+
+
+
+
+
+
+
+
+
+
+
