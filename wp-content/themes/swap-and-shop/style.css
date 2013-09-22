@@ -61,29 +61,29 @@ img.alignnone {
 	margin-bottom: 2em;
 }
 span.button {
-display: inline-block;
-padding: .382em 1.618em;
-border: none;
-color: white!important;
-text-align: center;
-text-transform: uppercase;
-text-decoration: none;
-font-weight: 700;
-font-size: 1em;
-font-family: inherit;
-cursor: pointer;
-overflow: visible;
-width: auto;
-line-height: 1.618em;
-background: #2293e2;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
--webkit-border-radius: 300px;
-border-radius: 300px;
--moz-background-clip: padding;
--webkit-background-clip: padding-box;
-background-clip: padding-box;
+	display: inline-block;
+	padding: .382em 1.618em;
+	border: none;
+	color: white!important;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1em;
+	font-family: inherit;
+	cursor: pointer;
+	overflow: visible;
+	width: auto;
+	line-height: 1.618em;
+	background: #2293e2;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 300px;
+	border-radius: 300px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
 }
 span.button:hover {
 	background: #d11d1d;
