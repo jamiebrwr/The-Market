@@ -25,13 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		
 	<section id="footer-widgets" class="col-full col-<?php echo $total; ?> fix">
 
-
+		<h2> Awesome Website Stats</h2>
 		<?php
 		$result = count_users();
-		echo '<h2>There are <a href="/The-Market/authors/"><span style="color: #2293e2;">'.$result['total_users'].'</span></a> total users</h2>';
+		echo '<h3>There are <a href="/The-Market/authors/"><span style="color: #2293e2;">'.$result['total_users'].'</span></a> total users</h3>';
 		
 		$numposts = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE post_type = 'product'");
-		if (0 < $numposts) echo '<h2>There have been a total of <a href="/The-Market/market/"><span style="color: #2293e2;">'.$numposts = number_format($numposts).'</span></a> items listed to date.</h2>';
+		if (0 < $numposts) echo '<h3>There have been a total of <a href="/The-Market/market/"><span style="color: #2293e2;">'.$numposts = number_format($numposts).'</span></a> items listed to date.</h3>';
 		
 		
 		
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		remove_filter('posts_where', 'filter_where');
 		
 		  if( $my_query->have_posts() ) {
-		    echo '<h2>There have been <span style="color: #2293e2;">'.count($my_query->posts) . '</span> items added today.</h2>';
+		    echo '<h3>There have been <span style="color: #2293e2;">'.count($my_query->posts) . '</span> items added today.</h3>';
 		    while ($my_query->have_posts()) : $my_query->the_post(); ?>
 		      <p><small><?php the_time('m.d.y') ?></small> <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
 		     <?php
