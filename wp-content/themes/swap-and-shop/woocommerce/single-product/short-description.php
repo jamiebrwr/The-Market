@@ -29,7 +29,7 @@ global $current_user;
 		   
 		<?php } else {
 			
-			echo '<em><strong>You must '.wp_register( '<span class="button">', '<span>', false).' to contact the seller.</strong></em>';
+			echo '<em><strong>You must <a href="http://me.co/The-Market/wp-login.php?action=register">Register</a> to contact the seller.</strong></em>';
 			echo '<p>&nbsp;</p>';
 
 		}
