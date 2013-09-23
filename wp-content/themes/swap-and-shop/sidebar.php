@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		   
 		   
 		   <header style="text-align:center;">
-			<a class="button large" style="padding:1em 6.2em;" href="/The-Market/post-new-item/">Post Now</a>
+			<a class="button large" style="padding:1em 6.2em;margin-bottom:1em;" href="/The-Market/post-new-item/">Post Now</a>
 		</header>
 		   
 		   
