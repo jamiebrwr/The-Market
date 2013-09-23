@@ -287,7 +287,7 @@ function wpse_74054_add_author_woocommerce() {
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 15;' ), 20 );
 
 
-
+/* List all WP Users */
 function contributors() {
 global $wpdb;
 
@@ -300,4 +300,14 @@ foreach($authors as $author) {
 		echo '</li>';
 	}
 echo '</ul>';
+}
+
+
+/* Remove Reviews from bottom of single product */
+add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
+function sb_woo_remove_reviews_tab($tabs) {
+
+ unset($tabs['reviews']);
+
+ return $tabs;
 }
