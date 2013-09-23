@@ -20,17 +20,51 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		   woo_active_sidebar( 'footer-3' ) ||
 		   woo_active_sidebar( 'footer-4' ) ) && $total > 0 ) {
 
-?>
-	
+?>	
 	<?php woo_footer_before(); ?>
 		
 	<section id="footer-widgets" class="col-full col-<?php echo $total; ?> fix">
-	
+
+
 		<?php
 		$result = count_users();
-		echo 'There are ', $result['total_users'], ' total users';
-		echo '.';
+		echo '<h2>There are <a href="/The-Market/authors/"><span style="color: #2293e2;">'.$result['total_users'].'</span></a> total users</h2>';
+		
+		$numposts = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE post_type = 'product'");
+		if (0 < $numposts) echo '<h2>There have been a total of <a href="/The-Market/market/"><span style="color: #2293e2;">'.$numposts = number_format($numposts).'</span></a> items listed to date.</h2>';
+		
+		
+		
+		
+		/* Count the amount of products added each day */
+		function filter_where($where = '') {
+		    //posts in the last 30 days
+		    $where .= " AND post_date > '" . date('Y-m-d', strtotime('-1 days')) . "'";
+		    return $where;
+		  }
+		add_filter('posts_where', 'filter_where');
+		    $args=array(
+		      'post_type' => 'product',
+		      'post_status' => 'publish',
+		      'showposts' => -1,
+		      'caller_get_posts'=> 1
+		      );
+		$my_query=new WP_Query($args);
+		remove_filter('posts_where', 'filter_where');
+		
+		  if( $my_query->have_posts() ) {
+		    echo '<h2>There have been <span style="color: #2293e2;">'.count($my_query->posts) . '</span> items added today.</h2>';
+		    while ($my_query->have_posts()) : $my_query->the_post(); ?>
+		      <p><small><?php the_time('m.d.y') ?></small> <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+		     <?php
+		    endwhile;
+		  } //if ($my_query)
+		wp_reset_query(); //just in case
+
+
 		?>
+
+
 
 		<?php $i = 0; while ( $i < $total ) { $i++; ?>
 			<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
