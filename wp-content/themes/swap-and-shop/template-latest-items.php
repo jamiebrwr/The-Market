@@ -60,13 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				  </section><!-- /.entry -->
 	
 				  <?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
-            
-				<?php // Determine wether or not to display comments here, based on "Theme Options".
-	        	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) ) {
-	        		comments_template();
-	        	}
 
-				?>
 			</article><!-- /.post -->
 			
 			<?php } else {
