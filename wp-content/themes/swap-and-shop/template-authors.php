@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	get_header();
 	global $woo_options;
 ?>   
-    <div id="content" class="page col-full">
+    <div id="content" class="page col-full woocommerce-columns-5">
     
     	<?php woo_main_before(); ?>
     	
