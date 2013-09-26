@@ -290,14 +290,21 @@ add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 15;' ), 20 )
 /* List all WP Users */
 function contributors() {
 global $wpdb;
-
 $authors = $wpdb->get_results("SELECT ID, user_nicename from $wpdb->users ORDER BY display_name");
-echo '<ul>';
+
+$counter = 1;
+
+echo '<ul class="products">';
 foreach($authors as $author) {
-		echo '<li>';
+
+		$first = ($counter % 6 == 0) ? ' first' : '';
+		$last = ($counter % 5 == 0) ? ' last' : '';
+		
+		echo '<li class="product', $first, $last,'">';
 			echo '<a href="'.get_bloginfo('url').'/?author='.$author->ID.'">'.get_avatar($author->ID).'</a>';
 			echo '<a href="'.get_bloginfo('url').'/?author='.$author->ID.'">'.get_the_author_meta('display_name', $author->ID).'</a>';
 		echo '</li>';
+		$counter++;
 	}
 echo '</ul>';
 }
