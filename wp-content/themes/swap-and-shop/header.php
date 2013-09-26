@@ -36,7 +36,7 @@ woo_head();
 			<nav class="col-full" role="navigation">
 				<ul id="top-nav" class="nav fl">
 					<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://me.co/The-Market/dashboard/">My Account</a></li>
-					<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="http://me.co/The-Market/edit-profile/">Edit Profile</a></li>
+					<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="http://me.co/The-Market/your-profile/">Edit Profile</a></li>
 					<li><a href="<?php echo wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 				</ul>
 			</nav>
