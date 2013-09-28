@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	global $woo_options;
 ?>
        
-    <div id="content" class="page col-full">
+    <div id="content" class="page col-full woocommerce-columns-5">
     
     	<?php woo_main_before(); ?>
     	
@@ -52,11 +52,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				<?php get_template_part( 'author-bio' ); ?>
 			<?php endif; ?>
 
+
+			<ul class="products">
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'partials/content', 'author' ); ?>
+				<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+				
 			<?php endwhile; ?>
-
+			</ul>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
