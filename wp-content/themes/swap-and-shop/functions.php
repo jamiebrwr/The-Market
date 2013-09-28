@@ -32,6 +32,156 @@ add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
  * @package WordPress
  *-------------------------------------------------------------------------------------------
  *
+ * Add Custom Post Types to Author Archives Page in WordPress
+ * 
+ * @access public
+ * @param $variable 
+ * @since 1.0
+ * @subpackage Woocommerce
+ * @link http://isabelcastillo.com/add-custom-post-types-to-author-archives-wordpress
+ * 
+ * @author: Jamie Brewer ( jamie.brwr@gmail.com )
+ * 
+ */
+
+function custom_post_author_archive($query) {
+    if ($query->is_author)
+        $query->set( 'post_type', array('product') );
+    
+    remove_action( 'pre_get_posts', 'custom_post_author_archive' );
+}
+
+
+/*-------------------------------------------------------------------------------------------
+ * Page-level DocBlock
+ * @package WordPress
+ *-------------------------------------------------------------------------------------------
+ *
+ * Remove Admin Bar for everyonw except Administrator
+ * 
+ * @access public
+ * @param $variable 
+ * @since 1.0
+ * @subpackage Woocommerce
+ * @link http://isabelcastillo.com/add-custom-post-types-to-author-archives-wordpress
+ * 
+ * @author: Jamie Brewer ( jamie.brwr@gmail.com )
+ * 
+ */
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+	  show_admin_bar(false);
+	}
+}
+
+
+/*-------------------------------------------------------------------------------------------
+ * Page-level DocBlock
+ * @package WordPress
+ *-------------------------------------------------------------------------------------------
+ *
+ * Woocommerce: assign an “author” to a product
+ * 
+ * @access public
+ * @param $variable 
+ * @since 1.0
+ * @subpackage Woocommerce
+ * @link http://wordpress.stackexchange.com/questions/74054/woocommerce-assign-an-author-to-a-product
+ * 
+ * @author: Jamie Brewer ( jamie.brwr@gmail.com )
+ * 
+ */
+add_action('init', 'wpse_74054_add_author_woocommerce', 999 );
+
+function wpse_74054_add_author_woocommerce() {
+    add_post_type_support( 'product', 'author' );
+}
+
+
+/*-------------------------------------------------------------------------------------------
+ * Page-level DocBlock
+ * @package WordPress
+ *-------------------------------------------------------------------------------------------
+ *
+ * Display 24 products per page. Goes in functions.php
+ * 
+ * @access public
+ * @param $variable 
+ * @since 1.0
+ * @subpackage Woocommerce
+ * 
+ * @author: Jamie Brewer ( jamie.brwr@gmail.com )
+ * 
+ */
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 15;' ), 20 );
+
+
+/*-------------------------------------------------------------------------------------------
+ * Page-level DocBlock
+ * @package WordPress
+ *-------------------------------------------------------------------------------------------
+ *
+ * List all WP Users
+ * 
+ * @access public
+ * @param $variable 
+ * @since 1.0
+ * @subpackage Woocommerce
+ * 
+ * @author: Jamie Brewer ( jamie.brwr@gmail.com )
+ * 
+ */
+function contributors() {
+global $wpdb;
+$authors = $wpdb->get_results("SELECT ID, user_nicename from $wpdb->users ORDER BY display_name");
+
+$counter = 1;
+
+echo '<ul class="products">';
+foreach($authors as $author) {
+	$first = ($counter % 6 == 0) ? ' first' : '';
+	$last = ($counter % 5 == 0) ? ' last' : '';
+		echo '<li class="product', $first, $last,'">';
+			echo '<a href="'.get_bloginfo('url').'/?author='.$author->ID.'">'.get_avatar($author->ID).'</a>';
+			echo '<a href="'.get_bloginfo('url').'/?author='.$author->ID.'">'.get_the_author_meta('display_name', $author->ID).'</a>';
+		echo '</li>';
+		$counter++;
+	}
+echo '</ul>';
+}
+
+
+/*-------------------------------------------------------------------------------------------
+ * Page-level DocBlock
+ * @package WordPress
+ *-------------------------------------------------------------------------------------------
+ *
+ * Remove Reviews from bottom of single product
+ * 
+ * @access public
+ * @param $variable 
+ * @since 1.0
+ * @subpackage Woocommerce
+ * 
+ * @author: Jamie Brewer ( jamie.brwr@gmail.com )
+ * 
+ */
+add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
+function sb_woo_remove_reviews_tab($tabs) {
+
+ unset($tabs['reviews']);
+
+ return $tabs;
+}
+ 
+ 
+/*-------------------------------------------------------------------------------------------
+ * Page-level DocBlock
+ * @package WordPress
+ *-------------------------------------------------------------------------------------------
+ *
  * Random Greetings to the user.
  * 
  * @access public
