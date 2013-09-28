@@ -21,19 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		   woo_active_sidebar( 'footer-4' ) ) && $total > 0 ) {
 
 ?>
-	
 	<?php woo_footer_before(); ?>
 		
 	<section id="footer-widgets" class="col-full col-<?php echo $total; ?> fix">
 	
-	
-	
-	
 		<h2> Awesome Website Stats</h2>
 		<?php get_template_part( 'partials/aside', 'stats' ); ?>
-
-
-
 
 		<?php $i = 0; while ( $i < $total ) { $i++; ?>
 			<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
@@ -70,30 +63,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 
 	</footer><!-- /#footer  -->
-
-
-
-
-
-
-
-
-
-
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 </div><!-- /#wrapper -->
 <?php wp_footer(); ?>
