@@ -18,6 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <title><?php woo_title( '' ); ?></title>
 <?php woo_meta(); ?>
 <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>" />
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Arapey' rel='stylesheet' type='text/css'>
 <?php
 wp_head();
 woo_head();
@@ -35,19 +37,20 @@ woo_head();
 	   <div id="top">
 			<nav class="col-full" role="navigation">
 				<ul id="top-nav" class="nav fl">
+					<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://me.co/The-Market/authors/">The Community</a></li>
 					<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://me.co/The-Market/dashboard/">My Account</a></li>
 					<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="http://me.co/The-Market/your-profile/">Edit Profile</a></li>
 					<li><a href="<?php echo wp_logout_url( home_url() ); ?>" title="Logout">Logout</a></li>
 				</ul>
 			</nav>
 		</div>
-	   
-	   
-	   
+   
 	<?php } else { ?>
+	
 	    <div id="top">
 			<nav class="col-full" role="navigation">
 				<ul id="top-nav" class="nav fl">
+					<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://me.co/The-Market/authors/">The Community</a></li>
 					<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://me.co/The-Market/login/">Login</a></li>
 					<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="http://me.co/The-Market/register/">Register</a></li>
 				</ul>
@@ -92,5 +95,41 @@ woo_head();
 		<?php woo_nav_after(); ?>
 	
 	</header><!-- /#header -->
+	
+	<section id="networth" class="col-full">
+	
+		<?php sjm_networth( '<h1>', '</h1>' ); ?>
+	
+	</section>
 
 	<?php woo_content_before(); ?>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
