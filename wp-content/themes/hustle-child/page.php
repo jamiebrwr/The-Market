@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="col-left">
+		<section id="main" class="fullwidth">
 		
 		<?php
 		if ( is_user_logged_in() ) { ?>
