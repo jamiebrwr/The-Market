@@ -98,7 +98,7 @@ woo_head();
 	
 	<section id="networth" class="col-full">
 	
-		<?php sjm_networth( '<h1>', '</h1>' ); ?>
+		<?php srh_networth( '<h1>', '</h1>' ); ?>
 	
 	</section>
 

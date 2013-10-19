@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
     	<?php $current_user = wp_get_current_user(); ?>
     	
-    	<?php $chosen = sjm_user_greetings(); ?>
+    	<?php $chosen = srh_user_greetings(); ?>
 
 		<?php if ( is_user_logged_in() ) { ?>
 		

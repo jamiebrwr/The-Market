@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 /**
- * Template Name: My Account
+ * Template Name: Authors
  *
  * This template is a full-width version of the page.php template file. It removes the sidebar area.
  *
@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	get_header();
 	global $woo_options;
 ?>   
-    <div id="content" class="page col-full">
+    <div id="content" class="page col-full woocommerce-columns-5">
     
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="fullwidth">
+		<section id="main" class="col-left">
 		
 		<?php
 		if ( is_user_logged_in() ) { ?>
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					</header>
                     
                     <section class="entry">
-	                	<?php the_content(); ?>
+	                	<?php contributors(); ?>
 	               	</section><!-- /.entry -->
 
 					<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
@@ -54,8 +54,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					</header>
                     
                     <section class="entry">
-	                	<p>You're a visitor! Please <a href="http://me.co/swap-and-shop/wp-login.php?action=register">register</a> to make post.</p>
-	                	<p><span>Or <a href="http://me.co/swap-and-shop/wp-login.php">login</a> if you're already registered.</span></p>
+	                	<p>You're a visitor! Please <a href="<?php echo bloginfo('url'); ?>/wp-login.php?action=register">register</a> to make post.</p>
+	                	<p><span>Or <a href="<?php echo bloginfo('url'); ?>/wp-login.php">login</a> if you're already registered.</span></p>
 	               	</section><!-- /.entry -->
 
 					<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>

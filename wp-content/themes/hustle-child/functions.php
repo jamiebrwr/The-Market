@@ -192,7 +192,7 @@ function sb_woo_remove_reviews_tab($tabs) {
  * @author: Jamie Brewer ( jamie.brwr@gmail.com )
  * 
  */
-function sjm_user_greetings() {
+function srh_user_greetings() {
 	/** These are the lyrics to Hello Dolly */
 	$geetings = "Hello
 	Hi
@@ -227,7 +227,7 @@ function sjm_user_greetings() {
  * @author: Jamie Brewer ( jamie.brwr@gmail.com )
  * 
  */
-function sjm_networth( $before, $after ) {
+function srh_networth( $before, $after ) {
 
 	global $wpdb;
 
@@ -238,7 +238,25 @@ function sjm_networth( $before, $after ) {
 	    $sum += $value;
 	}
 	setlocale(LC_MONETARY, 'en_US');
-	echo $before . 'Current Networth' . money_format('%(#10n', $sum) . "\n" . $after;
+	//echo $before . 'Current Networth' . money_format('%(#10n', $sum) . "\n" . $after;
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- GardnerNews -->
+<ins class="adsbygoogle alignleft"
+     style="display:inline-block;width:468px;height:60px;margin-bottom:10px;"
+     data-ad-client="ca-pub-9962188280666928"
+     data-ad-slot="1519242779"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- GardnerNews -->
+<ins class="adsbygoogle alignright"
+     style="display:inline-block;width:468px;height:60px;margin-bottom:10px;"
+     data-ad-client="ca-pub-9962188280666928"
+     data-ad-slot="1519242779"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
 	unset($value); // break the reference with the last element
 }
 
@@ -260,7 +278,7 @@ function sjm_networth( $before, $after ) {
  * @author: Jamie Brewer ( jamie.brwr@gmail.com )
  * 
  */
-function sjm_total_product_posts( $before, $after ){
+function srh_total_product_posts( $before, $after ){
 	
 	global $wpdb;
 	

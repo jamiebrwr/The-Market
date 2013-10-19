@@ -13,7 +13,7 @@ get_header();
             <div class="page">
 				
 				<header>
-                	<h1><?php _e( 'Your listing has been removed!', 'woothemes' ); ?></h1>
+                	<h1><?php _e( 'Well this is embarrassing.', 'woothemes' ); ?></h1>
                 </header>
                 <section class="entry">
                 	<p><?php _e( '' ); ?></p>
