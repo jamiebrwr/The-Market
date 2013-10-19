@@ -18,41 +18,55 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     
     	<?php woo_main_before(); ?>
     	
-		<section id="main" class="col-left"> 			
-
-        <?php
+		<section id="main" class="col-left">
+		
+		<?php
+		if ( is_user_logged_in() ) { ?>
+		     <?php
         	if ( have_posts() ) { $count = 0;
         		while ( have_posts() ) { the_post(); $count++;
-        ?>                                                           
-            <article <?php post_class(); ?>>
-				
-				<header>
-			    	<h1><?php the_title(); ?></h1>
-				</header>
-				
-                <section class="entry">
-                	<?php the_content(); ?>
+        ?>                                                             
+                <article <?php post_class(); ?>>
+					
+					<header>
+						<h1><?php the_title(); ?></h1>
+					</header>
+                    
+                    <section class="entry">
+	                	<?php contributors(); ?>
+	               	</section><!-- /.entry -->
 
-					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
-               	</section><!-- /.entry -->
+					<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
 
-				<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
-                
-            </article><!-- /.post -->
-            
-            <?php
-            	// Determine wether or not to display comments here, based on "Theme Options".
-            	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) ) {
-            		comments_template();
-            	}
+                </article><!-- /.post -->
+                                                    
+			<?php
+					} // End WHILE Loop
+				} else {
+			?>
+				<article <?php post_class(); ?>>
+                	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
+                </article><!-- /.post -->
+            <?php }
+		} else { ?>
+		
+			<article <?php post_class('register-notice'); ?>>
+					
+					<header>
+						<h1>Whoa Partner</h1>
+					</header>
+                    
+                    <section class="entry">
+	                	<p>You're a visitor! Please <a href="<?php echo bloginfo('url'); ?>/wp-login.php?action=register">register</a> to make post.</p>
+	                	<p><span>Or <a href="<?php echo bloginfo('url'); ?>/wp-login.php">login</a> if you're already registered.</span></p>
+	               	</section><!-- /.entry -->
 
-				} // End WHILE Loop
-			} else {
+					<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
+
+                </article><!-- /.post -->
+                <?php
+		}
 		?>
-			<article <?php post_class(); ?>>
-            	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-            </article><!-- /.post -->
-        <?php } // End IF Statement ?>  
         
 		</section><!-- /#main -->
 		
